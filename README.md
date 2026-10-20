@@ -1,5 +1,6 @@
 # Pi Native CRM
 [![M8ven Verified](https://m8ven.ai/badge/mcp/ydflow-pi-native-crm-18xtoi?variant=verified&v=c334140390afdc95a4f966bb79065c7a)](https://m8ven.ai/mcp/ydflow-pi-native-crm-18xtoi?s=readme)
+
 以真实 CRM 为状态空间的 Agent 原生工作台。
 
 让 Agent 读取客户与商机，消费知识和记忆，调用工具推进业务；让人看清它做了什么、依据什么，以及 CRM 发生了哪些变化。
