@@ -74,6 +74,13 @@ function hashRequest(input: Record<string, unknown>): string {
 
 export const crmStartConversationAndSend: McpToolDefinition<typeof inputShape> = {
   name: "crm_start_conversation_and_send",
+  // Pode reabrir atendimento e enviar; chave opcional não garante replay geral.
+  annotations: {
+    readOnlyHint: false,
+    destructiveHint: true,
+    idempotentHint: false,
+    openWorldHint: true,
+  },
   description:
     "Abre uma conversa NOVA (ou reabre a existente) com um contato — existente via `contact_id`, " +
     "ou novo/achado pelo telefone via `phone_number` — num canal ESPECÍFICO escolhido em " +
