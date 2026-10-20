@@ -216,3 +216,15 @@ pnpm 定向解析曾刷新无关 Webpack 子树并产生 peer 不匹配；最终
 - 远端主分支已有 Linux 失败：CI run `39395704786` 的结构测试失败及 `spawnSync rg ENOENT`，E2E run `39395704694` 也失败；主分支 perf run `39395704775` 成功。这些不是本 PR 的通过证明。PR 精确 head 的 Linux / Node 22 结果待 GitHub Actions 运行，最终以 PR checks 和正文补充为准。发现新增失败或安全回归时停止后续修改与合并。
 
 本阶段未部署、未修改业务/UI、未删除功能；不会自动合并。
+
+## 9. CI 登记补齐与合并授权（2026-10-20）
+
+用户随后明确授权完成后合并；本授权不意味着忽略失败检查、删除测试或绕过 CI。第 8 节记录的是当时尚待合并确认的阶段状态。
+
+- 首个 PR head `058d15b371c172ab59278355be9c8518bb2cf11d` 的完整本地单测为 1,325 文件、12,963 用例：118 失败 / 12,830 通过 / 1 expected fail / 14 skipped，另有原有 `spawn bash ENOENT`。逐项比较原基线：原有 117 个失败名称全部保留，唯一新增失败是新 CI job 未登记在 `GATILHO_ESPERADO`。检测后已停止并报告，用户确认继续后才修复。
+- 最小修复只在 `tests/unit/gatilho-dos-jobs-de-entrega.test.ts` 登记 `perf.yml::security-regression`，真实声明 `condicao: null` 及其类型、MCP 授权/注解、Cron/飞书边界和生产依赖审计职责。断言、workflow 条件、权限、产品代码和 UI 不变。修复前失败用例是负对照；补齐后该文件全部 23 项通过，含新增 job 的参数化条件校验。
+- 登记守卫与全部安全定向用例独立复验：14 文件 / 81 用例通过。扩展的 17 文件 / 102 用例在原 PATH 下仍有 7 项既有 Bash 相关失败；仅为诊断加入 Git Bash 后为 101 通过 / 1 失败，剩余既有 executor 守卫断言未改。环境不同的两次运行不用于替换原 117 项基线。
+- Linux / Node 22.23.3、pnpm 9.15.9：head `058d15b` 的 perf run `39407381790` 已通过冻结安装、类型检查、13 文件 / 58 项安全测试、生产依赖审计（零公告）和构建。相同 head 的数据库 invariants 已通过。登记修复提交后的精确 head 须重新以 PR checks 验证。
+- 首轮远端仍红：`verify-parte (1)` 有上述新增登记失败及 main 已有的 2 项 knobs 失败；`verify-parte (2)` 为 main 同样存在的 `spawnSync rg ENOENT`。E2E part 4 的 `vps-fresh-onboarding.spec.ts:438` 在 main run `39395704694` 和 PR run `39407381984` 同样于第 440 行等待 `/app/` 超时。镜像 smoke 失败源于既有工作流构建标签 `pi-native-crm-smoke:pr` 与运行标签 `pi-native-smoke:pr` 不一致，容器尚未启动；不能据此宣称镜像 boot 验证通过。未改动这些原有业务断言或扩大本安全补丁范围。
+
+完整单测及远端检查都必须按精确提交报告；旧 head 的通过不能当作新 head 已通过。若最终 CI 仍失败或出现新增回归，不执行合并，不把已授权合并写成已经合并。未部署生产环境。

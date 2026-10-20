@@ -228,6 +228,13 @@ const GATILHO_ESPERADO: Record<string, { condicao: string | null; efeito: string
     condicao: null,
     efeito: "Este é o check obrigatório `build-and-size` (`pnpm build` em Node 22).",
   },
+  "perf.yml::security-regression": {
+    condicao: null,
+    efeito:
+      "Valida tipos, anotações e autorização MCP, fronteiras de cron/Feishu e o audit " +
+      "de dependências de produção em Node 22. Sem ele uma falha nas cercas gerais " +
+      "poderia esconder uma regressão de segurança; não há interruptor de job.",
+  },
 
   // --- e o que legitimamente tem interruptor -----------------------------------
   "acolhida.yml::acolher": {
