@@ -46,6 +46,13 @@ const LIMIAR_PADRAO = 0.4;
 
 export const crmSearchKnowledge: McpToolDefinition<typeof buscarInputShape> = {
   name: "crm_search_knowledge",
+  // Busca wiki externa opcional e envia pergunta ao serviço de embeddings.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: true,
+  },
   description:
     "Busca semantica no acervo de conhecimento da organizacao (RAG). Devolve os trechos mais " +
     "relevantes com a similaridade de cada um. Quando nada passa do limiar, devolve " +
@@ -144,6 +151,13 @@ const listarMateriaisInputShape = {
 
 export const crmListKnowledgeSources: McpToolDefinition<typeof listarMateriaisInputShape> = {
   name: "crm_list_knowledge_sources",
+  // Lista fontes locais; não ingere nem reindexa.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false,
+  },
   description:
     "Lista os materiais que compoem o acervo de conhecimento da organizacao, com estado de " +
     "indexacao e contagem de trechos. Util para saber se uma resposta faltou por ausencia de " +
@@ -182,6 +196,13 @@ const propostasInputShape = {
 
 export const crmListImprovementProposals: McpToolDefinition<typeof propostasInputShape> = {
   name: "crm_list_improvement_proposals",
+  // Lê propostas; não aprova nem publica.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false,
+  },
   description:
     "Lista as propostas de melhoria que o ciclo de aprendizado gerou, com tipo, alvo e a " +
     "evidência que as motivou. LEITURA apenas: aprovar continua sendo decisão de uma pessoa.",
@@ -212,6 +233,13 @@ const lerMemoriaInputShape = {
 
 export const crmGetOrgMemory: McpToolDefinition<typeof lerMemoriaInputShape> = {
   name: "crm_get_org_memory",
+  // Lê documento e anotações locais.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false,
+  },
   description:
     "Lê o que a empresa registrou sobre si mesma — políticas, combinados e aprendizados que " +
     "valem para todo atendimento. Inclui documento publicado, revisão e aprendizados ativos. " +
@@ -244,6 +272,13 @@ const gravarMemoriaInputShape = {
 
 export const crmSaveOrgMemory: McpToolDefinition<typeof gravarMemoriaInputShape> = {
   name: "crm_save_org_memory",
+  // Insere anotação ativa a cada chamada, sem substituir documento.
+  annotations: {
+    readOnlyHint: false,
+    destructiveHint: false,
+    idempotentHint: false,
+    openWorldHint: false,
+  },
   description:
     "Registra um aprendizado que vale para toda a operação, não para um cliente só. Nasce com " +
     "origem 'agent' para o humano distinguir o que a IA anotou do que ele mesmo escreveu.",

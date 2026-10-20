@@ -37,6 +37,13 @@ function hashRequest(input: Record<string, unknown>): string {
 
 export const crmSendWhatsappMessage: McpToolDefinition<typeof inputShape> = {
   name: "crm_send_whatsapp_message",
+  // Envia mensagem e zera não-lidas da conversa; chave opcional de deduplicação expira.
+  annotations: {
+    readOnlyHint: false,
+    destructiveHint: true,
+    idempotentHint: false,
+    openWorldHint: true,
+  },
   description:
     "Envia uma mensagem WhatsApp outbound para uma conversa existente. Forneça `idempotency_key` para evitar duplicação em retries (TTL 24h).",
   inputSchema: inputShape,

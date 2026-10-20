@@ -49,6 +49,13 @@ const listInputShape = {
 
 export const crmListConversations: McpToolDefinition<typeof listInputShape> = {
   name: "crm_list_conversations",
+  // Consulta conversas, donos e posições da fila.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false,
+  },
   description:
     "Lista conversas do CRM com filtros opcionais por contato e status. Retorna preview da ultima mensagem. " +
     "Campos de governança por conversa: assignee_kind ('user'|'ai'|null), assigned_to_user_id + assigned_to_user_name (só o nome do atendente, sem email/telefone), tags[], e queue_position (posição 1-based na fila do inbox — só quando na fila, senão null).",
@@ -118,6 +125,13 @@ const getInputShape = {
 
 export const crmGetConversation: McpToolDefinition<typeof getInputShape> = {
   name: "crm_get_conversation",
+  // Consulta detalhe e posição da conversa.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false,
+  },
   description:
     "Retorna detalhes de uma conversa pelo UUID. Inclui status, atribuicao, contato, ultima atividade. " +
     "Governança: assignee_kind ('user'|'ai'|null), assigned_to_user_id + assigned_to_user_name (só o nome, sem email/telefone), tags[], e queue_position (1-based na fila do inbox — null quando não está na fila).",
@@ -172,6 +186,13 @@ const historyInputShape = {
 
 export const crmGetConversationHistory: McpToolDefinition<typeof historyInputShape> = {
   name: "crm_get_conversation_history",
+  // Lê mensagens e checkpoint; a memória confirmada pode consultar Mem0 externo.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: true,
+  },
   description:
     "Carrega histórico e memória durável de uma conversa, com compromissos, objeções, próxima ação e " +
     "revisão do checkpoint do atendimento atual. Memória somente leitura; indisponível não autoriza inferir fatos.",

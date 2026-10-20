@@ -81,6 +81,13 @@ const listInputShape = {
 
 export const crmListLeads: McpToolDefinition<typeof listInputShape> = {
   name: "crm_list_leads",
+  // Consulta negócios, donos e etapas.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false,
+  },
   description:
     "Lista leads do CRM filtrando por pipeline, stage, status e owner. Cursor base64 para paginação. " +
     "Governança por lead: owner_user_id + owner_user_name (só o nome do dono, sem email/telefone), stage ({ id, name } legível além do stage_id) e tags[].",
@@ -123,6 +130,13 @@ const getInputShape = {
 
 export const crmGetLead: McpToolDefinition<typeof getInputShape> = {
   name: "crm_get_lead",
+  // Consulta um negócio da organização.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false,
+  },
   description:
     "Retorna um lead pelo UUID. Inclui pipeline_id, stage_id, status, owner. " +
     "Governança: owner_user_id + owner_user_name (só o nome, sem email/telefone), stage ({ id, name } legível) e tags[].",
@@ -175,6 +189,13 @@ const createInputShape = {
 
 export const crmCreateLead: McpToolDefinition<typeof createInputShape> = {
   name: "crm_create_lead",
+  // Insere negócio e emite lead.created, consumido por automações.
+  annotations: {
+    readOnlyHint: false,
+    destructiveHint: false,
+    idempotentHint: false,
+    openWorldHint: true,
+  },
   description:
     "Cria um lead no pipeline informado. Use após qualificar um contato. Position é gerenciado pelo servidor.",
   inputSchema: createInputShape,
@@ -250,6 +271,13 @@ const updateInputShape = {
 
 export const crmUpdateLead: McpToolDefinition<typeof updateInputShape> = {
   name: "crm_update_lead",
+  // Sobrescreve campos e emite lead.updated/tag_added a cada chamada.
+  annotations: {
+    readOnlyHint: false,
+    destructiveHint: true,
+    idempotentHint: false,
+    openWorldHint: true,
+  },
   description:
     "Atualiza campos editáveis de um lead. Stage transitions são via crm_move_lead_stage; status é gerenciado por triggers.",
   inputSchema: updateInputShape,
@@ -286,6 +314,13 @@ const moveInputShape = {
 
 export const crmMoveLeadStage: McpToolDefinition<typeof moveInputShape> = {
   name: "crm_move_lead_stage",
+  // Muda etapa/posição, grava atividade e dispara automações/fluxos.
+  annotations: {
+    readOnlyHint: false,
+    destructiveHint: true,
+    idempotentHint: false,
+    openWorldHint: true,
+  },
   description:
     "Move um lead para outro stage dentro do MESMO pipeline. Audit registra from/to stage e reason. " +
     // "use clone" apontava para uma porta que o agente NÃO tem: não existe tool

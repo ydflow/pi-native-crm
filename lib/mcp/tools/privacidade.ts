@@ -29,6 +29,13 @@ const inputShape = {
 
 export const crmListPrivacyRequests: McpToolDefinition<typeof inputShape> = {
   name: "crm_list_privacy_requests",
+  // Lê pedidos; não exporta nem anonimiza.
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: false,
+  },
   description:
     "Lista pedidos de privacidade (LGPD) da organização — exportação ou exclusão de dados — com " +
     "tipo, situação, quando chegou e o prazo. NÃO executa nada: é leitura. Use para não insistir " +

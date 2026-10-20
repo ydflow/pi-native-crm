@@ -64,6 +64,13 @@ const inputShape = {
 
 export const crmRequestHumanHandoff: McpToolDefinition<typeof inputShape> = {
   name: "crm_request_human_handoff",
+  // Silencia IA, altera atribuição e avisa cliente; dedup dura apenas cinco segundos.
+  annotations: {
+    readOnlyHint: false,
+    destructiveHint: true,
+    idempotentHint: false,
+    openWorldHint: true,
+  },
   description:
     "Aciona handoff bot→humano. Marca a conversa como pending, silencia o bot e escolhe o " +
     "destino pelo roteamento G5: atende o target_user_id se elegível agora, senão rodízio " +

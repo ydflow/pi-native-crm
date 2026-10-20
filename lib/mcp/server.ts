@@ -46,6 +46,7 @@ export function createMcpServer(auth: McpAuthResult, requestId: string): McpServ
       {
         description: tool.description,
         inputSchema: tool.inputSchema,
+        annotations: tool.annotations,
       },
       async (rawArgs) => {
         const startedAt = Date.now();
