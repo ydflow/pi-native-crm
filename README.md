@@ -109,8 +109,8 @@ CRM 产品层通过自有接口调用运行内核；Pi 类型封装在适配层�
 准备 Node.js 22+、pnpm，以及开发用 Supabase 和 Redis 配置。
 
 ```bash
-git clone https://github.com/helsome/AiNativeCrm.git
-cd AiNativeCrm
+git clone https://github.com/ydflow/pi-native-crm.git
+cd pi-native-crm
 pnpm install --frozen-lockfile
 
 # 仅在配置文件不存在时创建，保留已有配置
