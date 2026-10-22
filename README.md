@@ -191,6 +191,16 @@ node scripts/serve-agent-demo.mjs
 
 本地输出放在 `output/`、`tmp/` 或 `scratchpad/`，历史交接放在 `docs/handoffs/`。环境文件、真实凭据、客户数据和数据库备份不进入版本库。
 
+## 助手 guias
+
+仓库内置一套面向 AI 编程助手的领域 guias（`pi-native-instalar`、`pi-native-cliente-novo`、`pi-native-metricas` 等），把它们安装到全局目录后，在 Claude Code、Codex、Cursor、OpenCode 和 Antigravity 里提到相应主题就会自动加载对应 guia：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ydflow/pi-native-crm/main/scripts/instalar-guias.sh | bash
+```
+
+安装后按名字调用：`/pi-native-instalar` 在 Claude Code、Cursor 和 Antigravity；`$pi-native-instalar` 在 Codex；在 OpenCode 里直接说明（"use o guia pi-native-instalar"）。移除用 `... | bash -s -- --remover`。详见 `scripts/instalar-guias.sh`。
+
 ## 文档
 
 - [文档入口](docs/index.md)
