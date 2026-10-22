@@ -2,7 +2,7 @@
 
 **17/set/2026.** Três investigações paralelas e independentes para o épico *Marketplace e Extensões*.
 
-- **Worktree:** `/Users/helsome/wt/marketplace-ext` · **Branch:** `feat/marketplace-de-extensoes`
+- **Worktree:** `/Users/ydflow/wt/marketplace-ext` · **Branch:** `feat/marketplace-de-extensoes`
 - **SHA base:** `8ad4e2572` (topo real de `origin/main` às 22h de 17/set)
 - **Régua:** **CONFIRMADO/MEDIDO** (li o código ou rodei o comando, com evidência citada),
   **INFERIDO** (deriva de leitura) e **PROPOSTO** (desenho) têm significados separados.

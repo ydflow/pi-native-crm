@@ -28,7 +28,7 @@ audited_against: origin/main @ 789dfa6 (v1.0.0, 2026-07-29)
 > Precisa do estado de agora? Meça na fonte. Para o que este documento mais cita:
 >
 > ```bash
-> gh api repos/helsome/AiNativeCrm/branches/main/protection \
+> gh api repos/ydflow/pi-native-crm/branches/main/protection \
 >   --jq '.required_status_checks.contexts'      # os checks obrigatórios
 > pnpm typecheck && pnpm lint && pnpm lint:channels && pnpm test:unit && pnpm test:shell
 > ```
@@ -315,7 +315,7 @@ consequência natural de trabalho em branches paralelas, mas ilustra a regra:
    obrigava toda rota de cron nova a ser cadastrada nele. Para conferir o desvínculo, olhe os
    status do último commit da `main` — enquanto o projeto esteve ligado, aparecia ali um
    check `Vercel`:
-   `gh api repos/helsome/AiNativeCrm/commits/main/status --jq '[.statuses[].context]'`.
+   `gh api repos/ydflow/pi-native-crm/commits/main/status --jq '[.statuses[].context]'`.
 
 ---
 

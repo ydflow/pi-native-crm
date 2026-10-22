@@ -5,7 +5,7 @@ depends_on: 01-spec-platform-base.md
 version: 0.1
 status: em revisão
 date: 2026-04-28
-owner: helson
+owner: ydflow
 referencia_arquitetural: docs/research/reference-synthesis.md
 escopo: Schema SQL completo, RLS, triggers, identity resolution, merge, custom fields, vocabulary, search & filters, eventos canônicos.
 ---

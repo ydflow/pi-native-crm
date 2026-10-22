@@ -2030,7 +2030,7 @@ Se você roda o pi-native-crm numa VPS, **leia a seção da versão para a qual 
 
   Quem pode arquivar é quem já podia encerrar: atendente para cima. O que passa a ficar registrado é o motivo da mudança: arquivar deixa o evento próprio `conversation.archived` na auditoria, em vez de se confundir com "devolvida" ou com o fechamento do atendimento. Fechar continua sendo fechar, e o número da aba "Fechadas" passa a contar só as fechadas — antes ele somava as arquivadas e mostrava mais do que a lista.
 
-- **Os guias do assistente passam a funcionar em qualquer pasta, e dois deixam de ser descartados** Um comando só (`curl -fsSL https://raw.githubusercontent.com/helsome/AiNativeCrm/main/scripts/instalar-guias.sh | bash`) liga os guias `pi-native-instalar`, `pi-native-cliente-novo`, `pi-native-metricas`, `pi-native-prompt`, `pi-native-contribuir` e `pi-native-doutrina` nas pastas globais do Claude Code, Codex, Cursor, OpenCode e Antigravity — antes eles só existiam com o assistente aberto dentro de um clone atualizado, o que deixava de fora justamente quem ainda não instalou. Pedir o assunto em português aciona o guia em qualquer um deles. Os guias não se atualizam sozinhos: rodar o comando de novo traz a versão nova, e `curl -fsSL https://raw.githubusercontent.com/helsome/AiNativeCrm/main/scripts/instalar-guias.sh | bash -s -- --remover` desfaz. O cabeçalho de dois guias trazia um erro de formato que assistentes mais rigorosos descartavam sem avisar, e foi corrigido.
+- **Os guias do assistente passam a funcionar em qualquer pasta, e dois deixam de ser descartados** Um comando só (`curl -fsSL https://raw.githubusercontent.com/ydflow/pi-native-crm/main/scripts/instalar-guias.sh | bash`) liga os guias `pi-native-instalar`, `pi-native-cliente-novo`, `pi-native-metricas`, `pi-native-prompt`, `pi-native-contribuir` e `pi-native-doutrina` nas pastas globais do Claude Code, Codex, Cursor, OpenCode e Antigravity — antes eles só existiam com o assistente aberto dentro de um clone atualizado, o que deixava de fora justamente quem ainda não instalou. Pedir o assunto em português aciona o guia em qualquer um deles. Os guias não se atualizam sozinhos: rodar o comando de novo traz a versão nova, e `curl -fsSL https://raw.githubusercontent.com/ydflow/pi-native-crm/main/scripts/instalar-guias.sh | bash -s -- --remover` desfaz. O cabeçalho de dois guias trazia um erro de formato que assistentes mais rigorosos descartavam sem avisar, e foi corrigido.
 
 - **Quem ainda não tem conta já vê login, cadastro, convite e páginas legais em espanhol** O idioma da interface sempre dependeu de uma sessão: `preferência da pessoa → idioma da
   organização → padrão`. Fora dessa cadeia — login, cadastro, aceite de convite, política de
@@ -6704,7 +6704,7 @@ servidor continuaria onde está. A segunda execução fixa tudo na mesma versão
 Para saber em que pé você está, sem mexer em nada:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/helsome/AiNativeCrm/main/hostgator-setup-kit/diagnostico.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ydflow/pi-native-crm/main/hostgator-setup-kit/diagnostico.sh | bash
 ```
 
 Ele só lê e explica — não escreve, não reinicia, não atualiza. Se disser que está afetada,
@@ -6978,7 +6978,7 @@ Primeira versão marcada do pi-native-crm. O projeto vinha sendo desenvolvido pu
 - `hostgator-setup-kit`: instalação completa (app + WAHA + banco) com um comando.
 - `baseline.sql` idempotente e auto-curativo — atualização não quebra clone com dados legados.
 - 8 scripts de operação: `install`, `update`, `backup`, `restore`, `reset-password`, `reset-mfa`, `healthcheck` e o assistente de instalação em IA.
-- Imagem publicada em `ghcr.io/helsome/pi-native-crm` — a VPS não compila nada.
+- Imagem publicada em `ghcr.io/ydflow/pi-native-crm` — a VPS não compila nada.
 
 ### Qualidade
 
@@ -6990,61 +6990,61 @@ Primeira versão marcada do pi-native-crm. O projeto vinha sendo desenvolvido pu
 
 - **Node 22 é obrigatório para desenvolvimento.** A suíte de invariantes instancia o cliente do Supabase, que exige o `WebSocket` global — nativo apenas a partir do Node 22. Isso não afeta quem apenas hospeda: a VPS roda a imagem pronta.
 
-[Não lançado]: https://github.com/helsome/AiNativeCrm/compare/v1.41.0...HEAD
-[1.41.0]: https://github.com/helsome/AiNativeCrm/compare/v1.40.0...v1.41.0
-[1.40.0]: https://github.com/helsome/AiNativeCrm/compare/v1.39.0...v1.40.0
-[1.39.0]: https://github.com/helsome/AiNativeCrm/compare/v1.38.0...v1.39.0
-[1.38.0]: https://github.com/helsome/AiNativeCrm/compare/v1.37.0...v1.38.0
-[1.37.0]: https://github.com/helsome/AiNativeCrm/compare/v1.36.0...v1.37.0
-[1.36.0]: https://github.com/helsome/AiNativeCrm/compare/v1.35.1...v1.36.0
-[1.35.1]: https://github.com/helsome/AiNativeCrm/compare/v1.35.0...v1.35.1
-[1.35.0]: https://github.com/helsome/AiNativeCrm/compare/v1.34.0...v1.35.0
-[1.34.0]: https://github.com/helsome/AiNativeCrm/compare/v1.33.0...v1.34.0
-[1.33.0]: https://github.com/helsome/AiNativeCrm/compare/v1.32.1...v1.33.0
-[1.32.1]: https://github.com/helsome/AiNativeCrm/compare/v1.32.0...v1.32.1
-[1.32.0]: https://github.com/helsome/AiNativeCrm/compare/v1.31.1...v1.32.0
-[1.31.1]: https://github.com/helsome/AiNativeCrm/compare/v1.31.0...v1.31.1
-[1.31.0]: https://github.com/helsome/AiNativeCrm/compare/v1.30.0...v1.31.0
-[1.30.0]: https://github.com/helsome/AiNativeCrm/compare/v1.29.0...v1.30.0
-[1.29.0]: https://github.com/helsome/AiNativeCrm/compare/v1.28.0...v1.29.0
-[1.28.0]: https://github.com/helsome/AiNativeCrm/compare/v1.27.3...v1.28.0
-[1.27.3]: https://github.com/helsome/AiNativeCrm/compare/v1.27.2...v1.27.3
-[1.27.2]: https://github.com/helsome/AiNativeCrm/compare/v1.27.1...v1.27.2
-[1.27.1]: https://github.com/helsome/AiNativeCrm/compare/v1.27.0...v1.27.1
-[1.27.0]: https://github.com/helsome/AiNativeCrm/compare/v1.26.0...v1.27.0
-[1.26.0]: https://github.com/helsome/AiNativeCrm/compare/v1.25.1...v1.26.0
-[1.25.1]: https://github.com/helsome/AiNativeCrm/compare/v1.25.0...v1.25.1
-[1.25.0]: https://github.com/helsome/AiNativeCrm/compare/v1.24.0...v1.25.0
-[1.24.0]: https://github.com/helsome/AiNativeCrm/compare/v1.23.0...v1.24.0
-[1.23.0]: https://github.com/helsome/AiNativeCrm/compare/v1.22.0...v1.23.0
-[1.22.0]: https://github.com/helsome/AiNativeCrm/compare/v1.21.0...v1.22.0
-[1.21.0]: https://github.com/helsome/AiNativeCrm/compare/v1.20.0...v1.21.0
-[1.20.0]: https://github.com/helsome/AiNativeCrm/compare/v1.19.0...v1.20.0
-[1.19.0]: https://github.com/helsome/AiNativeCrm/compare/v1.18.1...v1.19.0
-[1.18.1]: https://github.com/helsome/AiNativeCrm/compare/v1.18.0...v1.18.1
-[1.18.0]: https://github.com/helsome/AiNativeCrm/compare/v1.17.0...v1.18.0
-[1.17.0]: https://github.com/helsome/AiNativeCrm/compare/v1.16.1...v1.17.0
-[1.16.1]: https://github.com/helsome/AiNativeCrm/compare/v1.16.0...v1.16.1
-[1.16.0]: https://github.com/helsome/AiNativeCrm/compare/v1.15.1...v1.16.0
-[1.15.1]: https://github.com/helsome/AiNativeCrm/compare/v1.15.0...v1.15.1
-[1.15.0]: https://github.com/helsome/AiNativeCrm/compare/v1.14.0...v1.15.0
-[1.14.0]: https://github.com/helsome/AiNativeCrm/compare/v1.13.0...v1.14.0
-[1.13.0]: https://github.com/helsome/AiNativeCrm/compare/v1.12.0...v1.13.0
-[1.12.0]: https://github.com/helsome/AiNativeCrm/compare/v1.11.1...v1.12.0
-[1.11.1]: https://github.com/helsome/AiNativeCrm/compare/v1.11.0...v1.11.1
-[1.11.0]: https://github.com/helsome/AiNativeCrm/compare/v1.10.2...v1.11.0
-[1.10.2]: https://github.com/helsome/AiNativeCrm/compare/v1.10.1...v1.10.2
-[1.10.1]: https://github.com/helsome/AiNativeCrm/compare/v1.10.0...v1.10.1
-[1.10.0]: https://github.com/helsome/AiNativeCrm/compare/v1.9.1...v1.10.0
-[1.9.1]: https://github.com/helsome/AiNativeCrm/compare/v1.9.0...v1.9.1
-[1.9.0]: https://github.com/helsome/AiNativeCrm/compare/v1.8.0...v1.9.0
-[1.8.0]: https://github.com/helsome/AiNativeCrm/compare/v1.7.0...v1.8.0
-[1.7.0]: https://github.com/helsome/AiNativeCrm/compare/v1.6.0...v1.7.0
-[1.5.0]: https://github.com/helsome/AiNativeCrm/compare/v1.4.1...v1.5.0
-[1.4.1]: https://github.com/helsome/AiNativeCrm/compare/v1.4.0...v1.4.1
-[1.4.0]: https://github.com/helsome/AiNativeCrm/compare/v1.3.0...v1.4.0
-[1.3.0]: https://github.com/helsome/AiNativeCrm/compare/v1.2.1...v1.3.0
-[1.2.1]: https://github.com/helsome/AiNativeCrm/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/helsome/AiNativeCrm/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/helsome/AiNativeCrm/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/helsome/AiNativeCrm/releases/tag/v1.0.0
+[Não lançado]: https://github.com/ydflow/pi-native-crm/compare/v1.41.0...HEAD
+[1.41.0]: https://github.com/ydflow/pi-native-crm/compare/v1.40.0...v1.41.0
+[1.40.0]: https://github.com/ydflow/pi-native-crm/compare/v1.39.0...v1.40.0
+[1.39.0]: https://github.com/ydflow/pi-native-crm/compare/v1.38.0...v1.39.0
+[1.38.0]: https://github.com/ydflow/pi-native-crm/compare/v1.37.0...v1.38.0
+[1.37.0]: https://github.com/ydflow/pi-native-crm/compare/v1.36.0...v1.37.0
+[1.36.0]: https://github.com/ydflow/pi-native-crm/compare/v1.35.1...v1.36.0
+[1.35.1]: https://github.com/ydflow/pi-native-crm/compare/v1.35.0...v1.35.1
+[1.35.0]: https://github.com/ydflow/pi-native-crm/compare/v1.34.0...v1.35.0
+[1.34.0]: https://github.com/ydflow/pi-native-crm/compare/v1.33.0...v1.34.0
+[1.33.0]: https://github.com/ydflow/pi-native-crm/compare/v1.32.1...v1.33.0
+[1.32.1]: https://github.com/ydflow/pi-native-crm/compare/v1.32.0...v1.32.1
+[1.32.0]: https://github.com/ydflow/pi-native-crm/compare/v1.31.1...v1.32.0
+[1.31.1]: https://github.com/ydflow/pi-native-crm/compare/v1.31.0...v1.31.1
+[1.31.0]: https://github.com/ydflow/pi-native-crm/compare/v1.30.0...v1.31.0
+[1.30.0]: https://github.com/ydflow/pi-native-crm/compare/v1.29.0...v1.30.0
+[1.29.0]: https://github.com/ydflow/pi-native-crm/compare/v1.28.0...v1.29.0
+[1.28.0]: https://github.com/ydflow/pi-native-crm/compare/v1.27.3...v1.28.0
+[1.27.3]: https://github.com/ydflow/pi-native-crm/compare/v1.27.2...v1.27.3
+[1.27.2]: https://github.com/ydflow/pi-native-crm/compare/v1.27.1...v1.27.2
+[1.27.1]: https://github.com/ydflow/pi-native-crm/compare/v1.27.0...v1.27.1
+[1.27.0]: https://github.com/ydflow/pi-native-crm/compare/v1.26.0...v1.27.0
+[1.26.0]: https://github.com/ydflow/pi-native-crm/compare/v1.25.1...v1.26.0
+[1.25.1]: https://github.com/ydflow/pi-native-crm/compare/v1.25.0...v1.25.1
+[1.25.0]: https://github.com/ydflow/pi-native-crm/compare/v1.24.0...v1.25.0
+[1.24.0]: https://github.com/ydflow/pi-native-crm/compare/v1.23.0...v1.24.0
+[1.23.0]: https://github.com/ydflow/pi-native-crm/compare/v1.22.0...v1.23.0
+[1.22.0]: https://github.com/ydflow/pi-native-crm/compare/v1.21.0...v1.22.0
+[1.21.0]: https://github.com/ydflow/pi-native-crm/compare/v1.20.0...v1.21.0
+[1.20.0]: https://github.com/ydflow/pi-native-crm/compare/v1.19.0...v1.20.0
+[1.19.0]: https://github.com/ydflow/pi-native-crm/compare/v1.18.1...v1.19.0
+[1.18.1]: https://github.com/ydflow/pi-native-crm/compare/v1.18.0...v1.18.1
+[1.18.0]: https://github.com/ydflow/pi-native-crm/compare/v1.17.0...v1.18.0
+[1.17.0]: https://github.com/ydflow/pi-native-crm/compare/v1.16.1...v1.17.0
+[1.16.1]: https://github.com/ydflow/pi-native-crm/compare/v1.16.0...v1.16.1
+[1.16.0]: https://github.com/ydflow/pi-native-crm/compare/v1.15.1...v1.16.0
+[1.15.1]: https://github.com/ydflow/pi-native-crm/compare/v1.15.0...v1.15.1
+[1.15.0]: https://github.com/ydflow/pi-native-crm/compare/v1.14.0...v1.15.0
+[1.14.0]: https://github.com/ydflow/pi-native-crm/compare/v1.13.0...v1.14.0
+[1.13.0]: https://github.com/ydflow/pi-native-crm/compare/v1.12.0...v1.13.0
+[1.12.0]: https://github.com/ydflow/pi-native-crm/compare/v1.11.1...v1.12.0
+[1.11.1]: https://github.com/ydflow/pi-native-crm/compare/v1.11.0...v1.11.1
+[1.11.0]: https://github.com/ydflow/pi-native-crm/compare/v1.10.2...v1.11.0
+[1.10.2]: https://github.com/ydflow/pi-native-crm/compare/v1.10.1...v1.10.2
+[1.10.1]: https://github.com/ydflow/pi-native-crm/compare/v1.10.0...v1.10.1
+[1.10.0]: https://github.com/ydflow/pi-native-crm/compare/v1.9.1...v1.10.0
+[1.9.1]: https://github.com/ydflow/pi-native-crm/compare/v1.9.0...v1.9.1
+[1.9.0]: https://github.com/ydflow/pi-native-crm/compare/v1.8.0...v1.9.0
+[1.8.0]: https://github.com/ydflow/pi-native-crm/compare/v1.7.0...v1.8.0
+[1.7.0]: https://github.com/ydflow/pi-native-crm/compare/v1.6.0...v1.7.0
+[1.5.0]: https://github.com/ydflow/pi-native-crm/compare/v1.4.1...v1.5.0
+[1.4.1]: https://github.com/ydflow/pi-native-crm/compare/v1.4.0...v1.4.1
+[1.4.0]: https://github.com/ydflow/pi-native-crm/compare/v1.3.0...v1.4.0
+[1.3.0]: https://github.com/ydflow/pi-native-crm/compare/v1.2.1...v1.3.0
+[1.2.1]: https://github.com/ydflow/pi-native-crm/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/ydflow/pi-native-crm/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/ydflow/pi-native-crm/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/ydflow/pi-native-crm/releases/tag/v1.0.0

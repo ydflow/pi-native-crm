@@ -18,7 +18,7 @@ import {
  * ── Por que este arquivo existe ────────────────────────────────────────────
  *
  * `tests/shell/update-guard.test.sh` e `hostgator-setup-kit/test-validators.sh`
- * repetiam `ghcr.io/helsome` à mão em 31 lugares — fixtures E asserções.
+ * repetiam `ghcr.io/ydflow` à mão em 31 lugares — fixtures E asserções.
  * Isso amarrava a suíte a UM publicador: um fork que publica as próprias
  * imagens ficava vermelho em 4 casos sem ter quebrado nada, com a mensagem de
  * falha apontando para o valor "certo" do upstream. Derivar tudo de `IMG_NS`
@@ -56,7 +56,7 @@ import {
  * de forma coerente — kit + compose + `.env` de exemplo — onde há troca:
  *
  *   ACTIONS, dono=outrodono, IMG_NS dele   → 0 ✗ 1 ↓   corrida de fork: não cobra
- *   ACTIONS, dono=helsome, NS alheio   → 2 ✗       contra nós, cobra como antes
+ *   ACTIONS, dono=ydflow, NS alheio   → 2 ✗       contra nós, cobra como antes
  *   fora do Actions, IMG_NS com typo       → 1 ✗       o erro de digitação segue pego
  *   só NAMESPACE_DESTE_REPO trocado, p/ cá → 1 ✗       na URL derivada, não na âncora
  *   …o mesmo, com a URL fixa como antes    → 0 ✗ 1 ↓   ← é por isso que ela DERIVA
@@ -137,13 +137,13 @@ const RECADO_AO_FORK =
  *
  * Ela dizia "troque em três lugares, e só neles — nenhum OUTRO arquivo do repo
  * repete esse valor". contribuidor seguiu à risca (PR #605) e descobriu que
- * `ghcr_status`, em `_common.sh`, tinha `helsome` cravado nas duas URLs: o
+ * `ghcr_status`, em `_common.sh`, tinha `ydflow` cravado nas duas URLs: o
  * fork ficava com o pré-voo conferindo os pacotes do UPSTREAM enquanto
  * `gravar_imagens` escrevia no `.env` do cliente as referências do FORK.
  *
  * A catraca não pegava por acidente de forma: ela procura a string contígua
- * `ghcr.io/helsome`, e a URL do token parte o valor em
- * `ghcr.io/token?scope=repository:helsome/`. Instrução que promete mais do
+ * `ghcr.io/ydflow`, e a URL do token parte o valor em
+ * `ghcr.io/token?scope=repository:ydflow/`. Instrução que promete mais do
  * que o gate confere é pior que instrução nenhuma — quem a segue conclui que
  * terminou.
  */
@@ -237,7 +237,7 @@ describe("o kit aponta para o que o CI realmente publica", () => {
     // SÓ aquele literal faria a âncora se calar contra o upstream. Derivando, o
     // mesmo commit fica vermelho AQUI, contra seis arquivos que ele não tocou.
     // Medido nos dois sentidos, com a URL fixa e com ela derivada (ver cabeçalho).
-    const repo = `https://github.com/${DONO_DESTE_REPO}/AiNativeCrm`;
+    const repo = `https://github.com/${DONO_DESTE_REPO}/pi-native-crm`;
     for (const script of ["install.sh", "comecar.sh"]) {
       const texto = fs.readFileSync(path.join(RAIZ, "hostgator-setup-kit", script), "utf8");
       expect(texto).toContain(`REPO_URL="\${REPO_URL:-${repo}.git}"`);
@@ -337,7 +337,7 @@ describe("catraca: ninguém mais repete o namespace", () => {
     ".env.hostgator.example",
     // FIXTURE de comentário REAL de PR, capturada para os instrumentos de triagem.
     // O literal aparece dentro do texto que um humano escreveu num PR
-    // (`ghcr.io/helsome/pi-native-crm:1.29.0`, citado ao diagnosticar o pdf.js).
+    // (`ghcr.io/ydflow/pi-native-crm:1.29.0`, citado ao diagnosticar o pdf.js).
     //
     // Entra aqui e não em `excluiDir` de propósito: `PERMITIDO` casa o caminho
     // relativo EXATO, então o perdão vale para ESTE arquivo e só para ele —

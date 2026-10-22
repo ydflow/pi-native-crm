@@ -8,7 +8,7 @@
 | Campo | Valor |
 |---|---|
 | Data | 2026-09-17 |
-| Worktree | `/Users/helsome/wt/marketplace-ext` |
+| Worktree | `/Users/ydflow/wt/marketplace-ext` |
 | Branch | `feat/marketplace-de-extensoes` |
 | SHA base | `8ad4e257257f1f30a2d26de59229b93fa8915b6b` (topo de `origin/main`) |
 | `git status --porcelain` | uma única linha: `?? docs/research/marketplace/` (este documento) |
@@ -17,7 +17,7 @@
 Comandos de reprodução do cabeçalho:
 
 ```bash
-cd /Users/helsome/wt/marketplace-ext
+cd /Users/ydflow/wt/marketplace-ext
 git rev-parse HEAD            # 8ad4e257257f1f30a2d26de59229b93fa8915b6b
 git rev-parse --abbrev-ref HEAD  # feat/marketplace-de-extensoes
 git status --porcelain | wc -l   # 1
@@ -608,7 +608,7 @@ core no meio de uma instalação de pacote.
 ### 6.1 Os cinco obrigatórios, medidos na fonte (CONFIRMADO)
 
 ```console
-$ gh api repos/helsome/AiNativeCrm/branches/main/protection \
+$ gh api repos/ydflow/pi-native-crm/branches/main/protection \
     --jq '.required_status_checks.contexts|join(", ")'
 verify, build-and-size, invariants, e2e, imagens-ok
 ```
@@ -618,7 +618,7 @@ verify, build-and-size, invariants, e2e, imagens-ok
 ```bash
 for wf in ci.yml perf.yml e2e.yml publish-image.yml; do
   id=$(gh run list --workflow=$wf --branch main --status success --limit 1 --json databaseId --jq '.[0].databaseId')
-  gh api repos/helsome/AiNativeCrm/actions/runs/$id/jobs \
+  gh api repos/ydflow/pi-native-crm/actions/runs/$id/jobs \
     --jq '.jobs[] | "\(.name)\t\(.conclusion)\t\(((.completed_at|fromdateiso8601)-(.started_at|fromdateiso8601))/60|floor) min"'
 done
 ```
@@ -773,5 +773,5 @@ Explícito, para ninguém medir contra a régua errada:
 ---
 
 _Documento gravado em `docs/research/marketplace/02-o-que-sera-impactado.md`, worktree
-`/Users/helsome/wt/marketplace-ext`, branch `feat/marketplace-de-extensoes`, SHA base
+`/Users/ydflow/wt/marketplace-ext`, branch `feat/marketplace-de-extensoes`, SHA base
 `8ad4e257257f1f30a2d26de59229b93fa8915b6b`, 2026-09-17. Nenhum arquivo existente foi alterado._

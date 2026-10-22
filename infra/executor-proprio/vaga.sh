@@ -11,7 +11,7 @@ set -uo pipefail
 
 VAGA="${1:?uso: vaga.sh <número da vaga>}"
 CONF=/etc/pi-native-executor
-REPO="$(cat "$CONF/repo" 2>/dev/null || echo helsome/AiNativeCrm)"
+REPO="$(cat "$CONF/repo" 2>/dev/null || echo ydflow/pi-native-crm)"
 CPUS="$(cat "$CONF/cpus-por-vaga" 2>/dev/null || echo 4)"
 MEMORIA="$(cat "$CONF/memoria-por-vaga" 2>/dev/null || echo 14g)"
 IMAGEM=pi-native-executor:atual

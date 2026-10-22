@@ -41,7 +41,7 @@ for g in ${r:+"$r/.agents/skills"} ~/.claude/skills ~/.agents/skills ~/.gemini/c
 done
 if [ -n "$s" ]; then bash "$s"; else
   echo "NÃO MEDIDO — não achei o quem-sou.sh ${r:+no clone $r }nem nas pastas globais dos guias." >&2
-  echo "Instale os guias pelo comando de uma linha do README (https://github.com/helsome/AiNativeCrm#readme) e rode de novo." >&2
+  echo "Instale os guias pelo comando de uma linha do README (https://github.com/ydflow/pi-native-crm#readme) e rode de novo." >&2
   false
 fi
 ```
@@ -172,12 +172,12 @@ de release é automático e uma seção à mão já quase publicou uma versão p
 e aí o instalador precisa perguntar por ela.
 
 O texto do fragmento vira a nota pública da versão: a LP publica o `CHANGELOG.md` em
-[pi-native-crm/changelog](https://github.com/helsome/AiNativeCrm/releases), nos três idiomas. Escreva
+[pi-native-crm/changelog](https://github.com/ydflow/pi-native-crm/releases), nos três idiomas. Escreva
 para quem nunca viu o código.
 
 **Mexeu num guia** (`.agents/skills/pi-native-*`: nome, o que ele faz, como chamar)? Rode
 `pnpm skills:sync` e avise no PR que a página de guias da LP
-([pi-native-crm/guias](https://github.com/helsome/AiNativeCrm/tree/main/.agents/skills)) precisa acompanhar — senão ela passa a ensinar um guia que não existe.
+([pi-native-crm/guias](https://github.com/ydflow/pi-native-crm/tree/main/.agents/skills)) precisa acompanhar — senão ela passa a ensinar um guia que não existe.
 
 As duas páginas saem de um PR deste repositório; um `404` nesses links quer dizer que ele
 ainda não entrou, não que você errou o caminho.

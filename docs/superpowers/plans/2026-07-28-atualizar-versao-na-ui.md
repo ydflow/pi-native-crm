@@ -1917,7 +1917,7 @@ fi
 4. No bloco 5, use a imagem versionada:
 ```bash
 step "Baixando a versão nova do app e reiniciando"
-export APP_IMAGE="ghcr.io/helsome/pi-native-crm:${TARGET_TAG#v}"
+export APP_IMAGE="ghcr.io/ydflow/pi-native-crm:${TARGET_TAG#v}"
 docker compose -f "$COMPOSE" pull
 docker compose -f "$COMPOSE" up -d
 ```

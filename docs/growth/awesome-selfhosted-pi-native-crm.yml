@@ -15,7 +15,7 @@
 
 name: pi-native-crm
 website_url: https://pi-native.com.br
-source_code_url: https://github.com/helsome/AiNativeCrm
+source_code_url: https://github.com/ydflow/pi-native-crm
 description: Sales CRM with built-in AI agents that answer, qualify and advance deals over WhatsApp. Multi-tenant with row-level isolation, a per-tenant RAG knowledge base, and an audit log of every action the AI takes.
 licenses:
   - MIT

@@ -1,9 +1,9 @@
 
-> pi-native-crm@0.1.0 test:unit /Users/helsome/pi-native-crm-canais
+> pi-native-crm@0.1.0 test:unit /Users/ydflow/pi-native-crm-canais
 > vitest run
 
 
- RUN  v4.1.10 /Users/helsome/pi-native-crm-canais
+ RUN  v4.1.10 /Users/ydflow/pi-native-crm-canais
 
 
  Test Files  136 passed (136)

@@ -1,6 +1,6 @@
 # W4 — Organizar a operação (pacote `organizar`)
 
-**Worktree:** `/Users/helsome/pi-native-crm-ia360-w4-organizar` (branch `feat/ia-360-w4-organizar`, base `d25cd1c`)
+**Worktree:** `/Users/ydflow/pi-native-crm-ia360-w4-organizar` (branch `feat/ia-360-w4-organizar`, base `d25cd1c`)
 **Pacote alvo:** `organizar` — hoje com **1 capacidade** (marcadores). Webhooks e automações: **zero**.
 
 ---

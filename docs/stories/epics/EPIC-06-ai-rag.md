@@ -22,7 +22,7 @@ exposes_contracts:
   - "event.ai.budget_throttled"
 status: pending
 created_at: 2026-04-28
-owner: helson
+owner: ydflow
 ---
 
 # EPIC-06 — AI Agent + RAG + Sentiment + Handoff

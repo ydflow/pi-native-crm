@@ -226,7 +226,7 @@
 - Evidência: `inbox-multimodal-onda51-*.png`
 
 - [ ] **Step 1: Ambiente** — dev server (porta deste worktree) + WAHA + sessão WORKING + agente publicado na org de teste (a org E2E `6e567068` tem `default_agent_id`; confirmar que há versão publicada no canal `e2e-wave12`; se não, publicar uma). Worker do agente NÃO é necessário (o endpoint roda o LLM inline). Precisa de credencial LLM real da org (OpenAI BYOK já cadastrada em sessões anteriores).
-- [ ] **Step 2: Login como agente** (`e2e-agent`), abrir a conversa REAL `bcb64692` (contato "helson").
+- [ ] **Step 2: Login como agente** (`e2e-agent`), abrir a conversa REAL `bcb64692` (contato "ydflow").
 - [ ] **Step 3:** clicar "Sugerir resposta" → confirmar loading → o rascunho aparece no composer (texto coerente com o histórico da conversa, na persona do agente, SEM "sou um assistente virtual"). Screenshot do rascunho no composer. Medir por ferramenta que o textarea tem conteúdo não-vazio.
 - [ ] **Step 4:** editar levemente e enviar → provar entrega no WhatsApp real (SQL: `external_id` + `ack>=2`, `by_user=t`).
 - [ ] **Step 5:** caso de erro amigável — numa org/canal SEM agente publicado, o botão retorna toast claro ("Nenhum agente publicado…"), não quebra a UI.

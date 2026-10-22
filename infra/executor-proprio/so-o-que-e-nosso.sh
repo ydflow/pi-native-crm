@@ -17,7 +17,7 @@
 # o GitHub venha a criar. Na dúvida (payload ilegível, campo ausente), recusa.
 set -uo pipefail
 
-REPO_ESPERADO="${PI_NATIVE_REPO_ESPERADO:-helsome/AiNativeCrm}"
+REPO_ESPERADO="${PI_NATIVE_REPO_ESPERADO:-ydflow/pi-native-crm}"
 
 recusa() {
   echo "::error::executor próprio recusou este job: $1. Ele só roda trabalho de branch deste repositório; PR de fork roda nas máquinas do GitHub." >&2

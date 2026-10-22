@@ -1,6 +1,6 @@
 # W1-GATILHOS — relatório
 
-**Worktree:** `/Users/helsome/fv-gatilhos` · **Branch:** `fv/gatilhos` (de `feat/followup-vivo` = `4f89a0da`)
+**Worktree:** `/Users/ydflow/fv-gatilhos` · **Branch:** `fv/gatilhos` (de `feat/followup-vivo` = `4f89a0da`)
 **Data:** 2026-08-10
 
 ---

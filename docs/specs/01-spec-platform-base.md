@@ -4,7 +4,7 @@ parent: 01-prd-platform-base.md
 version: 0.1
 status: v0.1
 date: 2026-04-28
-owner: helson
+owner: ydflow
 referencia_arquitetural: docs/research/reference-synthesis.md
 regras_aplicadas: [T-01, T-02, T-03, T-04, T-05, T-06, T-07, T-08, L-04, L-06, L-07, L-08, L-10, B-04]
 ---

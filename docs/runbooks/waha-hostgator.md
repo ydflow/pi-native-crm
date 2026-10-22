@@ -2,7 +2,7 @@
 title: Runbook — WAHA em produção (VPS Hostgator)
 status: canônico
 last_review: 2026-09-17
-owner: helson
+owner: ydflow
 ---
 
 # Runbook — WAHA em produção (VPS Hostgator)

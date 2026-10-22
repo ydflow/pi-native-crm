@@ -4,7 +4,7 @@ parent: docs/design-system/00-overview.md
 version: 0.1
 status: em revisão
 date: 2026-04-28
-owner: helson
+owner: ydflow
 ---
 
 # Screen Flow — Índice

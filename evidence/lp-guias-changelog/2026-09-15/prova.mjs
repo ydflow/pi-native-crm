@@ -34,7 +34,7 @@ async function vazamentos(page, rotulo) {
 
 (async () => {
   // A régua vem da FONTE, não de um número escrito à mão: releases novas mudam a contagem.
-  const md = await (await fetch("https://raw.githubusercontent.com/helsome/AiNativeCrm/main/CHANGELOG.md")).text();
+  const md = await (await fetch("https://raw.githubusercontent.com/ydflow/pi-native-crm/main/CHANGELOG.md")).text();
   const VERSOES = [...md.matchAll(/^## \[(\d+\.\d+\.\d+)\] \u2014 \d{4}-\d{2}-\d{2}$/gm)].map((m) => m[1]);
   const N = VERSOES.length, ULTIMA = VERSOES[0], PENULTIMA = VERSOES[1];
   console.log(`régua: ${N} versões no CHANGELOG, mais nova v${ULTIMA}`);
@@ -134,7 +134,7 @@ async function vazamentos(page, rotulo) {
       await botaoCopiar.scrollIntoViewIfNeeded();
       await botaoCopiar.click();
       const area = await p.evaluate(() => navigator.clipboard.readText());
-      checa(area === "curl -fsSL https://raw.githubusercontent.com/helsome/AiNativeCrm/main/scripts/instalar-guias.sh | bash", `${L.id} ${w}px: copiar põe o comando exato na área de transferência`);
+      checa(area === "curl -fsSL https://raw.githubusercontent.com/ydflow/pi-native-crm/main/scripts/instalar-guias.sh | bash", `${L.id} ${w}px: copiar põe o comando exato na área de transferência`);
       await p.screenshot({ path: `${OUT}/guias-instalar-${L.id}-${w}.png` });
 
       // FAQ abre

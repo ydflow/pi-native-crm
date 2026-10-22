@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Worktree | `/Users/helsome/wt/marketplace-ext` |
+| Worktree | `/Users/ydflow/wt/marketplace-ext` |
 | Branch | `feat/marketplace-de-extensoes` |
 | SHA base | `8ad4e257257f1f30a2d26de59229b93fa8915b6b` (topo de `origin/main`) |
 | `git status --porcelain` no início | **vazio** (0 linhas — `git status --porcelain \| wc -l` → `0`) |
@@ -26,7 +26,7 @@ Onde a afirmação pôde virar comando, está o comando — número envelhece, `
 **CONFIRMADO.** A tabela abaixo foi montada lendo os arquivos citados. Reproduza o esqueleto com:
 
 ```bash
-cd /Users/helsome/wt/marketplace-ext
+cd /Users/ydflow/wt/marketplace-ext
 find app/api/v1/extensions -name route.ts | sort            # as portas HTTP
 grep -n '^create or replace function' supabase/migrations/20260917120000_0271_extensoes_declarativas.sql
 grep -n 'export async function\|rpc(\|action:' lib/extensions/service.ts
@@ -460,7 +460,7 @@ Explícito, para que ninguém leia ausência como negativa:
    deste repositório** e a doutrina diz que o que vale para PR é a lei em `docs/doctrine/extensoes.md`.
    Onde cito "PROG-017 §11" estou repetindo o ponteiro da doutrina, não o conteúdo.
 9. **Não verifiquei a branch protection.** Repito a lista do `CLAUDE.md`; o comando que a mede é
-   `gh api repos/helsome/AiNativeCrm/branches/main/protection --jq '.required_status_checks.contexts|join(", ")'`.
+   `gh api repos/ydflow/pi-native-crm/branches/main/protection --jq '.required_status_checks.contexts|join(", ")'`.
 10. **Não li `scripts/sincronizar-skills.ts` nem `scripts/skills-embutidas/espelho.ts`.** Descrevi o
     espelho pelo cabeçalho do teste e por `diff -rq` de uma única skill.
 11. **Não medi o estoque de `.changes/`** (só vi que o diretório existe e tem fragmentos), nem rodei

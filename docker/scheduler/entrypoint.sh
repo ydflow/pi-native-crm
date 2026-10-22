@@ -30,7 +30,7 @@ APP_ORIGIN="http://app:3000"
 # que um `$` no valor virasse expansão de variável (o header sairia truncado, e
 # todo cron responderia 401 em silêncio) e uma crase virasse substituição de
 # comando — execução arbitrária a cada minuto. Medido com um segredo hostil: a
-# versão com aspas duplas entregava `seghelsomeredo/Users/helsome…`,
+# versão com aspas duplas entregava `segydflowredo/Users/ydflow…`,
 # com o `whoami` EXECUTADO. Aqui o valor vai entre aspas SIMPLES, com as aspas
 # simples internas escapadas — dentro delas o sh não interpreta nada.
 SEGREDO_SEGURO="$(printf '%s' "$INTERNAL_SECRET" | sed "s/'/'\\\\''/g")"

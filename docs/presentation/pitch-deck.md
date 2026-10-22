@@ -16,7 +16,7 @@ date: 2026-04-29
 
 **Multi-tenant · LGPD-nativo · MCP-ready · Brasil-first**
 
-<sub>helson — São Paulo, 29 de abril de 2026</sub>
+<sub>ydflow — São Paulo, 29 de abril de 2026</sub>
 
 ---
 
@@ -289,8 +289,8 @@ Adotamos integralmente o **bundle herdado** da referência *Aula CRM Nichado WAH
 
 > "**Não é mais um CRM. É a plataforma onde IA e humanos atendem juntos.**"
 
-📧 157001337+helsome@users.noreply.github.com
+📧 157001337+ydflow@users.noreply.github.com
 📍 São Paulo, BR
-🔗 docs: github.com/helsome/AiNativeCrm (em breve)
+🔗 docs: github.com/ydflow/pi-native-crm (em breve)
 
 **Perguntas?**

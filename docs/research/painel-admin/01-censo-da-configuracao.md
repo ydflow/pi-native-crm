@@ -1,7 +1,7 @@
 # Censo da superfície de configuração — o que o painel de administração impacta
 
 > **Investigação A** do épico "painel de administração da instalação".
-> Worktree `/Users/helsome/wt/painel-admin`, branch `feat/painel-de-administracao`.
+> Worktree `/Users/ydflow/wt/painel-admin`, branch `feat/painel-de-administracao`.
 > **SHA medido: `b264bd2d65539cb415f09f1e64742cdea6eb719a`**, `git status --porcelain` vazio no
 > início da medição. Medido em 2026-09-17.
 >

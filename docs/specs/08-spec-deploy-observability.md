@@ -5,7 +5,7 @@ escopo: transversal
 version: 0.1
 status: em revisão
 date: 2026-04-28
-owner: helson (DevOps/SRE)
+owner: ydflow (DevOps/SRE)
 referencias:
   - docs/prd/00-prd-master.md
   - docs/prd/01-prd-platform-base.md

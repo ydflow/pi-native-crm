@@ -1,7 +1,7 @@
 {
   "pi-native-crm/retorno-de-paciente": {
     "publisher_label": "Pi Native CRM",
-    "repository": "https://github.com/helsome/AiNativeCrm",
+    "repository": "https://github.com/ydflow/pi-native-crm",
     "tags": [
       "clinica",
       "retorno",
@@ -11,7 +11,7 @@
   },
   "pi-native-crm/carrinho-abandonado": {
     "publisher_label": "Pi Native CRM",
-    "repository": "https://github.com/helsome/AiNativeCrm",
+    "repository": "https://github.com/ydflow/pi-native-crm",
     "tags": [
       "ecommerce",
       "vendas",
@@ -21,7 +21,7 @@
   },
   "pi-native-crm/primeira-semana": {
     "publisher_label": "Pi Native CRM",
-    "repository": "https://github.com/helsome/AiNativeCrm",
+    "repository": "https://github.com/ydflow/pi-native-crm",
     "tags": [
       "equipe",
       "treinamento"

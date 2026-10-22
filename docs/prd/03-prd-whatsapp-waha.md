@@ -5,7 +5,7 @@ depends_on: 01-prd-platform-base.md, 02-prd-customer-360.md
 version: 0.1
 status: em revisão
 date: 2026-04-28
-owner: helson
+owner: ydflow
 referencia_arquitetural: docs/research/reference-synthesis.md
 ---
 

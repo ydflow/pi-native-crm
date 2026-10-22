@@ -1,6 +1,6 @@
 # W1 — O painel de quem configura o agente
 
-**Worktree:** `/Users/helsome/pi-native-crm-ia360-w1-painel` (branch `feat/ia-360-w1-painel`, base `d25cd1c`)
+**Worktree:** `/Users/ydflow/pi-native-crm-ia360-w1-painel` (branch `feat/ia-360-w1-painel`, base `d25cd1c`)
 **Pacote alvo:** infraestrutura de apresentação — serve todas as outras waves.
 
 ---

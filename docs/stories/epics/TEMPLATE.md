@@ -9,7 +9,7 @@ exposes_contracts:
   - "<contrato canônico exposto pra outros epics>"
 status: pending
 created_at: 2026-04-28
-owner: helson
+owner: ydflow
 ---
 
 # EPIC-NN — Nome do Epic

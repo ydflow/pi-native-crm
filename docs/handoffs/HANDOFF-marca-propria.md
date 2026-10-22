@@ -45,12 +45,12 @@ que JÁ RODA e vai atualizar?**
 
 | | |
 |---|---|
-| **Worktree** | `/Users/helsome/pi-native-crm-marca` |
+| **Worktree** | `/Users/ydflow/pi-native-crm-marca` |
 | **Branch** | `feat/marca-propria`, criada de `origin/main` @ `f9abedd0` |
 | **Banco** | Supabase local `127.0.0.1:54321` — **compartilhado com outras sessões**, checar antes de DDL |
 | **Blueprint** | https://claude.ai/code/artifact/1aa1b097-d6f4-4aff-b388-194b1e546ca2 |
 
-> ⚠️ O worktree principal (`/Users/helsome/pi-native-crm`) é de **outra sessão** —
+> ⚠️ O worktree principal (`/Users/ydflow/pi-native-crm`) é de **outra sessão** —
 > mudou de `fix/alertas-de-seguranca-github` para `fix/issues-triadas` no meio desta.
 > Não commitar lá.
 

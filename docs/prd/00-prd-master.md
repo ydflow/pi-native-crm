@@ -3,7 +3,7 @@ title: pi-native-crm — PRD-Mestre
 version: 0.2
 status: em revisão
 date: 2026-07-19
-owner: helson
+owner: ydflow
 referencia_arquitetural: docs/research/reference-synthesis.md
 ---
 

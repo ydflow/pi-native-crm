@@ -194,7 +194,7 @@ describe("documentação — o que ela aponta existe", () => {
     expect(
       violacoes,
       `nota de pendência sobrevivente — o gate citado JÁ está ativo:\n${violacoes.join("\n")}\n` +
-        `confira a régua real: gh api repos/helsome/AiNativeCrm/branches/main/protection --jq '.required_status_checks.contexts'`,
+        `confira a régua real: gh api repos/ydflow/pi-native-crm/branches/main/protection --jq '.required_status_checks.contexts'`,
     ).toEqual([]);
   });
 });

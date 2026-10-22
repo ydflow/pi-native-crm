@@ -124,7 +124,7 @@
   **Achado operacional sério (2ª rodada, corrigido antes de fechar a task):** o gatilho de silêncio é
   CROSS-CONTATO por design (varre a org inteira) — uma 1ª tentativa que travou num timeout de teste (antes de
   eu ajustar `test.setTimeout`) deixou um fluxo de teste `active` sem cleanup, e ele começou a enrollar
-  contatos REAIS do dev DB (`helson`, `Cliente Fila E2E`, etc.) nas rodadas seguintes — 12 enrollments
+  contatos REAIS do dev DB (`ydflow`, `Cliente Fila E2E`, etc.) nas rodadas seguintes — 12 enrollments
   espúrios encontrados e removidos manualmente. Fix estrutural: (1) o teste desativa o pointer IMEDIATAMENTE
   após confirmar o próprio enrollment (não espera o fim do teste — desativar não afeta enrollments já vivos,
   só impede o sweep de pegar mais um), (2) todo o corpo pós-enroll roda em `try/finally` com

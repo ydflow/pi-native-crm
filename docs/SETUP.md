@@ -585,4 +585,4 @@ Bem-vindo ao pi-native-crm. 🛠️
 
 ---
 
-> **Achou um erro neste guia?** Abra uma [issue](https://github.com/helsome/AiNativeCrm/issues) ou mande um PR — esse doc vive da contribuição da comunidade.
+> **Achou um erro neste guia?** Abra uma [issue](https://github.com/ydflow/pi-native-crm/issues) ou mande um PR — esse doc vive da contribuição da comunidade.

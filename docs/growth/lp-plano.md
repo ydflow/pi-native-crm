@@ -339,7 +339,7 @@ Imagem: a mesma tela em duas marcas diferentes, lado a lado.
 Bloco de código real, copiável:
 
 ```bash
-git clone https://github.com/helsome/AiNativeCrm.git
+git clone https://github.com/ydflow/pi-native-crm.git
 cd pi-native-crm/hostgator-setup-kit
 bash install.sh
 ```

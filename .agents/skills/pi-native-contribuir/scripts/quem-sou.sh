@@ -4,7 +4,7 @@
 # primeira palavra da saída; o resto é para gente ler.
 #
 # Sinais (nenhum pede login):
-#   1. o `gh` está logado como @helsome;
+#   1. o `gh` está logado como @ydflow;
 #   2. o `origin` é o repositório principal ou um fork (informativo).
 #
 # Uso: bash quem-sou.sh            → "mantenedor — ..." ou "contribuidor — ..."
@@ -25,11 +25,11 @@ motivo=""
 # 1) gh logado como o dono (só se o gh existe; nunca pede login).
 if command -v gh >/dev/null 2>&1; then
   login="$(gh api user --jq .login 2>/dev/null || true)"
-  [ "$login" = "helsome" ] && motivo="o gh está logado como @helsome"
+  [ "$login" = "ydflow" ] && motivo="o gh está logado como @ydflow"
 fi
 
 case "$origin" in
-  *github.com[:/]helsome/AiNativeCrm*) remoto="origin é o repositório principal" ;;
+  *github.com[:/]ydflow/pi-native-crm*) remoto="origin é o repositório principal" ;;
   "")                                       remoto="sem origin configurado" ;;
   *)                                        remoto="origin é um fork ($origin)" ;;
 esac

@@ -1,6 +1,6 @@
 # Investigação B — O que será impactado pelo épico "painel de administração + modo admin"
 
-- **Worktree:** `/Users/helsome/wt/painel-admin`
+- **Worktree:** `/Users/ydflow/wt/painel-admin`
 - **Branch:** `feat/painel-de-administracao` · **SHA:** `b264bd2d65539cb415f09f1e64742cdea6eb719a`
 - **`git status --porcelain`:** vazio (árvore limpa) — medido no início e no fim.
 - **Régua importante:** `git log --oneline origin/main..HEAD | wc -l` → **0**.
@@ -468,9 +468,9 @@ invalidação não alcança, (4) falha fora do memo. Quatro peças, não uma.
 
 | Serviço | Linha | `image:` | `pull_policy:` | `env_file` | `mem_limit` |
 |---|---|---|---|---|---|
-| `app` | `docker-compose.prod.yml:14` | `${APP_IMAGE:-ghcr.io/helsome/pi-native-crm:stable}` (`:35`) | `${APP_PULL_POLICY:-always}` (`:36`) | `.env` (`:38`) | 768m |
-| `worker` | `:58` | `${WORKER_IMAGE:-ghcr.io/helsome/pi-native-worker:stable}` (`:92`) | `always` (`:93`) | `.env` (`:98`) | 512m |
-| `scheduler` | `:203` | `${SCHEDULER_IMAGE:-ghcr.io/helsome/pi-native-scheduler:stable}` (`:213`) | `always` (`:214`) | — (`INTERNAL_SECRET` via `environment:`) | — |
+| `app` | `docker-compose.prod.yml:14` | `${APP_IMAGE:-ghcr.io/ydflow/pi-native-crm:stable}` (`:35`) | `${APP_PULL_POLICY:-always}` (`:36`) | `.env` (`:38`) | 768m |
+| `worker` | `:58` | `${WORKER_IMAGE:-ghcr.io/ydflow/pi-native-worker:stable}` (`:92`) | `always` (`:93`) | `.env` (`:98`) | 512m |
+| `scheduler` | `:203` | `${SCHEDULER_IMAGE:-ghcr.io/ydflow/pi-native-scheduler:stable}` (`:213`) | `always` (`:214`) | — (`INTERNAL_SECRET` via `environment:`) | — |
 
 O `worker` mantém `build:` **ao lado** da imagem (`:94-97`), e o comentário
 `:58-68` explica: com os dois presentes o Compose usa a imagem quando ela existe e

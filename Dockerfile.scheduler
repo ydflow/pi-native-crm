@@ -7,7 +7,7 @@
 # deveria ser offline. Doutrina: docs/doctrine/packaging.md, invariante 1.
 FROM alpine:3.20
 
-LABEL org.opencontainers.image.source="https://github.com/helsome/AiNativeCrm" \
+LABEL org.opencontainers.image.source="https://github.com/ydflow/pi-native-crm" \
       org.opencontainers.image.title="Pi Native CRM scheduler" \
       org.opencontainers.image.licenses="MIT"
 

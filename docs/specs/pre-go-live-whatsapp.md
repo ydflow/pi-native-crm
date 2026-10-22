@@ -1,6 +1,6 @@
 # Pré-go-live do WhatsApp
 
-Contrato implementado na issue [#573](https://github.com/helsome/AiNativeCrm/issues/573).
+Contrato implementado na issue [#573](https://github.com/ydflow/pi-native-crm/issues/573).
 Estado: **CONFIRMADO por código e testes**, não um simulador de mensagens.
 
 ## Comportamento

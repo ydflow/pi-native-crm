@@ -57,7 +57,7 @@ Critérios: ser open source · ser alternativa a um software proprietário · at
 | Intercom | intercom.com |
 | Octadesk | octadesk.com |
 
-Nome da alternativa: `pi-native-crm` · Repositório: `https://github.com/helsome/AiNativeCrm`
+Nome da alternativa: `pi-native-crm` · Repositório: `https://github.com/ydflow/pi-native-crm`
 
 ---
 

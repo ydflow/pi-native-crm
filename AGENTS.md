@@ -166,7 +166,7 @@ O CI tem cinco checks obrigatórios na `main`: `verify`, `build-and-size`, `inva
 `imagens-ok`. Não confie nesta lista — reconte antes de citar:
 
 ```bash
-gh api repos/helsome/AiNativeCrm/branches/main/protection \
+gh api repos/ydflow/pi-native-crm/branches/main/protection \
   --jq '.required_status_checks.contexts|join(", ")'
 ```
 

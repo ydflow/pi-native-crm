@@ -1,7 +1,7 @@
 ---
 tipo: investigacao-de-risco
 epico: painel de administração da instalação
-medido_em: worktree /Users/helsome/wt/painel-admin
+medido_em: worktree /Users/ydflow/wt/painel-admin
 branch: feat/painel-de-administracao
 sha: b264bd2d65539cb415f09f1e64742cdea6eb719a
 data: 2026-09-17

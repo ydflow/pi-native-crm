@@ -6,7 +6,7 @@ FROM node:22-alpine
 WORKDIR /app
 
 # Procedência (doutrina de packaging, invariante 2).
-LABEL org.opencontainers.image.source="https://github.com/helsome/AiNativeCrm" \
+LABEL org.opencontainers.image.source="https://github.com/ydflow/pi-native-crm" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.title="Pi Native CRM worker"
 

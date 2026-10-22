@@ -1,6 +1,6 @@
 # Prova em tela — ligar o aviso de compromisso
 
-**Régua:** worktree `/Users/helsome/wt/rsky` (exclusivo), branch
+**Régua:** worktree `/Users/ydflow/wt/rsky` (exclusivo), branch
 `resgate/rafaesky` @ `cb388641`, árvore limpa. Ambiente fresco estilo VPS:
 Supabase local do projeto `pi-native-crm` com a cadeia de migrations movida para
 fora e **só o `supabase/baseline.sql`** aplicado (`ON_ERROR_STOP=1`) — o mesmo

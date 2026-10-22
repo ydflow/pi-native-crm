@@ -11,7 +11,7 @@
 
 ## 0. Onde o trabalho acontece
 
-- **Worktree:** `/Users/helsome/pi-native-crm-crm-vivo`
+- **Worktree:** `/Users/ydflow/pi-native-crm-crm-vivo`
 - **Branch:** `feat/crm-vivo`, criada de `origin/main` (`3b4c193`)
 - **Próxima migration livre:** `0070` (a base vai até `0067`)
 - **Dev server desta entrega:** porta **3020** (3000/3001/3010 são de outras sessões — **não encoste**)

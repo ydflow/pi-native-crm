@@ -39,8 +39,8 @@ que a criou, avisa e pula. `--remover` só apaga o que este script criou: ele an
 
 ── Uso ───────────────────────────────────────────────────────────────────────
 
-  curl -fsSL https://raw.githubusercontent.com/helsome/AiNativeCrm/main/scripts/instalar-guias.sh | bash
-  curl -fsSL https://raw.githubusercontent.com/helsome/AiNativeCrm/main/scripts/instalar-guias.sh | bash -s -- --remover
+  curl -fsSL https://raw.githubusercontent.com/ydflow/pi-native-crm/main/scripts/instalar-guias.sh | bash
+  curl -fsSL https://raw.githubusercontent.com/ydflow/pi-native-crm/main/scripts/instalar-guias.sh | bash -s -- --remover
   bash scripts/instalar-guias.sh                 # instala ou atualiza (cópia da main)
   bash scripts/instalar-guias.sh --fonte .       # aponta para ESTE clone (quem edita os guias)
   bash scripts/instalar-guias.sh --remover       # desfaz
@@ -54,7 +54,7 @@ AJUDA
 
 set -euo pipefail
 
-REPO_URL="${PI_NATIVE_REPO_URL:-https://github.com/helsome/AiNativeCrm.git}"
+REPO_URL="${PI_NATIVE_REPO_URL:-https://github.com/ydflow/pi-native-crm.git}"
 CACHE_PADRAO="$HOME/.pi-native/guias"
 CACHE="${PI_NATIVE_GUIAS_HOME:-$CACHE_PADRAO}"
 # Absoluto, como o --fonte: o link guarda o caminho LITERAL, e um relativo

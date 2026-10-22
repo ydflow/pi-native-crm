@@ -3,7 +3,7 @@ title: Specs Reconciliation Log
 version: 1.1
 status: ativo
 date: 2026-04-28
-owner: helson
+owner: ydflow
 ---
 
 # Specs Reconciliation Log

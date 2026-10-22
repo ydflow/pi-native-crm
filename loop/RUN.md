@@ -3,7 +3,7 @@
 O loop é o mesmo em qualquer modo: uma sessão descartável executa `loop/LOOP.md`
 do zero, guiada só pelo estado em disco. O que muda é quem aperta o botão.
 
-**Onde o loop RODA: no checkout principal — `/Users/helsome/pi-native-crm`
+**Onde o loop RODA: no checkout principal — `/Users/ydflow/pi-native-crm`
 (`loop/loop.config.json → main_checkout`) — DEPOIS que a branch `gov/setup` for
 mergeada em `main`.** O worktree `pi-native-crm-gov` existe só para montar a
 maquinaria sem tocar o checkout principal; ele não é a casa do loop.
@@ -42,7 +42,7 @@ maquinaria sem tocar o checkout principal; ele não é a casa do loop.
   ```json
   {
     "max_sessions_per_day": 12,
-    "main_checkout": "/Users/helsome/pi-native-crm",
+    "main_checkout": "/Users/ydflow/pi-native-crm",
     "parallel_ui_lane": false,
     "smoke": "pnpm typecheck && pnpm lint && pnpm test:unit"
   }
@@ -58,7 +58,7 @@ maquinaria sem tocar o checkout principal; ele não é a casa do loop.
 ## Modo interativo (você olhando)
 
 ```bash
-cd /Users/helsome/pi-native-crm && claude
+cd /Users/ydflow/pi-native-crm && claude
 > /pi-native-gov-loop
 ```
 Uma sessão = uma feature. Quer outra feature, abra OUTRA sessão (`claude` de novo
@@ -77,7 +77,7 @@ agendar) e agende com cadência ≥2h:
 ```bash
 #!/usr/bin/env bash
 set -u
-REPO="/Users/helsome/pi-native-crm"; cd "$REPO" || exit 1
+REPO="/Users/ydflow/pi-native-crm"; cd "$REPO" || exit 1
 
 [ -f loop/STOP ] && exit 0
 # gate barato em bash: checkpoint pendente ou recusado => nem invoca o modelo
@@ -104,7 +104,7 @@ claude -p "Leia loop/LOOP.md e execute o protocolo à risca." \
 
 **launchd (macOS — a máquina do dono)** — mesmo padrão do vendaval-loop:
 `~/Library/LaunchAgents/com.pi-native.gov-loop.plist` com `ProgramArguments`
-`/bin/bash -lc '/Users/helsome/pi-native-crm/loop/run-session.sh'` e
+`/bin/bash -lc '/Users/ydflow/pi-native-crm/loop/run-session.sh'` e
 `StartCalendarInterval` de 2 em 2 horas na janela 7h-23h. Em Linux/VPS, cron
 (`CRON_TZ=America/Sao_Paulo` + `0 7-23/2 * * *`) ou systemd timer.
 

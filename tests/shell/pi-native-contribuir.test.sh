@@ -79,7 +79,7 @@ clone="$TMP/c1"; clonar "$clone" "alguem@fork.dev"
 saida="$(cd "$clone" && bash .agents/skills/pi-native-contribuir/scripts/quem-sou.sh)"
 assert_contains "$saida" "^contribuidor" "e-mail desconhecido → contribuidor"
 assert_contains "$saida" "alguem@fork.dev" "a saída explica o motivo (o e-mail)"
-saida="$(cd "$clone" && FAKE_GH_LOGIN=helsome bash .agents/skills/pi-native-contribuir/scripts/quem-sou.sh --curto)"
+saida="$(cd "$clone" && FAKE_GH_LOGIN=ydflow bash .agents/skills/pi-native-contribuir/scripts/quem-sou.sh --curto)"
 assert_contains "$saida" "^mantenedor$" "gh logado como conta principal → mantenedor (--curto)"
 saida="$(cd "$clone" && FAKE_GH_LOGIN=outra-conta bash .agents/skills/pi-native-contribuir/scripts/quem-sou.sh)"
 assert_contains "$saida" "^contribuidor" "gh logado como outra conta → contribuidor"
@@ -161,7 +161,7 @@ cfg "$clone" core.hooksPath ".agents/skills/pi-native-contribuir/scripts/hooks"
 saida="$(cd "$clone" && bash .agents/skills/pi-native-contribuir/scripts/hooks/sessao.sh)"
 assert_contains "$saida" "contribuidor armados" "com hooks armados, diz que estão"
 cfg "$clone" user.email "mantenedor@exemplo.com"
-saida="$(cd "$clone" && FAKE_GH_LOGIN=helsome bash .agents/skills/pi-native-contribuir/scripts/hooks/sessao.sh)"; code=$?
+saida="$(cd "$clone" && FAKE_GH_LOGIN=ydflow bash .agents/skills/pi-native-contribuir/scripts/hooks/sessao.sh)"; code=$?
 assert_exit "$code" 0 "mantenedor: sai com 0"
 if [ -z "$saida" ]; then ok "mantenedor: silêncio total"; else falha "mantenedor: silêncio total" "saída: $saida"; fi
 
@@ -191,7 +191,7 @@ for sh in bash zsh; do
   passo0 "$cmd" "$sem_guias" "$clone7/app/api"
   assert_contains "$out" "^contribuidor — e-mail do git: alguem@fork.dev" "($sh) subpasta do clone, sem instalação global: responde igual à raiz"
   cfg "$clone7" user.email "mantenedor@exemplo.com"
-  export FAKE_GH_LOGIN=helsome
+  export FAKE_GH_LOGIN=ydflow
   passo0 "$cmd" "$sem_guias" "$clone7/app/api"
   unset FAKE_GH_LOGIN
   assert_contains "$out" "^mantenedor" "($sh) subpasta do clone do mantenedor: responde mantenedor (o guia não o trata como contribuidor)"
@@ -199,7 +199,7 @@ for sh in bash zsh; do
   passo0 "$cmd" "$sem_guias" "$antigo/app"
   if [ "$code" != 0 ] && [ -z "$out" ]; then ok "($sh) clone sem o script, sem instalação global: sai com erro e sem resposta inventada"; else falha "($sh) clone sem o script, sem instalação global: sai com erro e sem resposta inventada" "code=$code out=$out"; fi
   assert_contains "$err" "^NÃO MEDIDO — não achei o quem-sou.sh no clone .*c7-antigo" "($sh) e o erro diz o que não achou e onde procurou"
-  assert_contains "$err" "comando de uma linha do README (https://github.com/helsome/AiNativeCrm#readme) e rode de novo" "($sh) e diz como sair dali"
+  assert_contains "$err" "comando de uma linha do README (https://github.com/ydflow/pi-native-crm#readme) e rode de novo" "($sh) e diz como sair dali"
   passo0 "$cmd" "$sem_guias" "$fora"
   if [ "$code" != 0 ] && [ -z "$out" ]; then ok "($sh) fora de clone, sem instalação global: sai com erro e sem resposta inventada"; else falha "($sh) fora de clone, sem instalação global: sai com erro e sem resposta inventada" "code=$code out=$out"; fi
   assert_contains "$err" "^NÃO MEDIDO — não achei o quem-sou.sh nem nas pastas globais" "($sh) e o erro não finge que havia clone"

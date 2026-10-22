@@ -1,7 +1,7 @@
 # CAL-W0-MOTOR — a sabotagem, colada
 
 > Medido em 2026-08-26 13:43 -0300 no worktree
-> `/Users/helsome/wt/cal-api`, branch `cal/w1-api`,
+> `/Users/ydflow/wt/cal-api`, branch `cal/w1-api`,
 > SHA `8fc8591e`, árvore limpa antes de começar
 > (`git status --porcelain` vazio). Cada bloco abaixo é a saída literal do
 > `vitest`, não um resumo dela.

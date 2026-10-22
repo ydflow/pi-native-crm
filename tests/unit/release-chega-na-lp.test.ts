@@ -152,7 +152,7 @@ describe("a release chega à página de changelog da LP", () => {
     const bloco = passo(PASSO_LP);
     const condicao = /\n\s+if: (.+)/.exec(bloco)?.[1] ?? "";
     expect(condicao).toContain("steps.pendente.outputs.cortar == 'sim'");
-    expect(condicao).toContain("github.repository == 'helsome/AiNativeCrm'");
+    expect(condicao).toContain("github.repository == 'ydflow/pi-native-crm'");
     // `always()` rodaria depois de uma falha nas imagens e mascararia a causa.
     expect(condicao).not.toContain("always()");
   });

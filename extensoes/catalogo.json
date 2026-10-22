@@ -30,7 +30,7 @@
       "sha256": "b3927aa77db7e1bbcdb0a81b28ea4de2e32e3b3e31a365a9cfc8b53e57b30ba4",
       "byte_length": 3933,
       "publisher_label": "Pi Native CRM",
-      "repository": "https://github.com/helsome/AiNativeCrm",
+      "repository": "https://github.com/ydflow/pi-native-crm",
       "tags": [
         "ecommerce",
         "vendas",
@@ -66,7 +66,7 @@
       "sha256": "c25c87d5faa837874a563f0747d5089d915e3506c1bb3d08f08b8c2cf29f6a7b",
       "byte_length": 3328,
       "publisher_label": "Pi Native CRM",
-      "repository": "https://github.com/helsome/AiNativeCrm",
+      "repository": "https://github.com/ydflow/pi-native-crm",
       "tags": [
         "equipe",
         "treinamento"
@@ -101,7 +101,7 @@
       "sha256": "f3b631bfbfa3edf6770f309c396dd17ebd23692e06ea956270945bf8fe1617f6",
       "byte_length": 3528,
       "publisher_label": "Pi Native CRM",
-      "repository": "https://github.com/helsome/AiNativeCrm",
+      "repository": "https://github.com/ydflow/pi-native-crm",
       "tags": [
         "clinica",
         "retorno",

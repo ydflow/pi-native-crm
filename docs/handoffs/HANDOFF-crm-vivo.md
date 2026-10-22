@@ -16,7 +16,7 @@ do repositório.
 ### O que entrou
 
 - **Base nova.** A branch `feat/operacao-visivel` (worktree original) estava **246 commits atrás da `main`** — `git diff --stat main HEAD` = 384 arquivos, 49.100 deleções. Faltavam as migrations `0054`–`0066` inteiras (`followup_flows`, `media_multimodal`, `message_templates`, `agent_followup_selector`, `conversation_snooze`, `conversation_notes`, `human_cases`). O working tree ainda tinha **cópias não-versionadas** de arquivos que já existem na main (`app/app/radar/`, `lib/leads/`, `app/api/v1/leads/at-risk/`). Construir ali custaria um merge de 384 arquivos no fim.
-  → Worktree novo `/Users/helsome/pi-native-crm-crm-vivo`, branch `feat/crm-vivo` a partir de `origin/main` (`3b4c193`). Próxima migration livre: **0070**.
+  → Worktree novo `/Users/ydflow/pi-native-crm-crm-vivo`, branch `feat/crm-vivo` a partir de `origin/main` (`3b4c193`). Próxima migration livre: **0070**.
 - **`BRIEFING-crm-vivo.md`** — contrato único de trabalho do time (missão, 7 achados verificados, decisões fechadas, 5 CORES, contrato de UI, 9 waves, protocolo de verificação visual, checklist `sistema-vivo`, não-negociáveis do repo, regras de operação do time, DoD por wave).
 - **Time montado.** `@DevVivo` (DEVELOPER, único com escrita em código de produção) e `@QAVivo` (QA, escreve só em `tests/`, `evidence/`, `scripts/seed-*`) criados via `lina spawn`. `@Arquiteto` recrutado para contratos.
 - **Plano compartilhado** — itens `CRMV0`..`CRMV8` registrados em `.lina/plan.md`.
@@ -1737,7 +1737,7 @@ na tela. O time ficou parado por uma dependência que **eu inventei**.
 
 ### ⚠️ O worker da 8787 (de OUTRA sessão) morreu
 
-Estava vivo às 18:15 (PID 19673, cwd `/Users/helsome/pi-native-crm`); depois, nada escutando
+Estava vivo às 18:15 (PID 19673, cwd `/Users/ydflow/pi-native-crm`); depois, nada escutando
 na porta em 3 amostras. **Ninguém deste time reiniciou** — o briefing §0 é explícito ("não mate,
 não reinicie"), e o vigia registrou sem tocar.
 

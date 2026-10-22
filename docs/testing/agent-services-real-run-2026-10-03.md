@@ -104,7 +104,7 @@ TEST_DB_IMAGE=pi-native-test-pg15 pnpm test:db \
 
 ## 代码与环境
 
-- 仓库：`helsome/AiNativeCrm`。
+- 仓库：`ydflow/pi-native-crm`。
 - 实测分支：`feat/chat-first-workbench-2026-10-01`。
 - 实测提交：`25b6f97699b0c71152c96d784b4cefae9d63e5bc`。
 - GitHub main：`fc80b14dc88406ab6f5e6ec3ed9ca61d632c0674`；本次所要求的第三方集成在功能分支，不在 main。

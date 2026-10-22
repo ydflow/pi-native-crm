@@ -3,7 +3,7 @@ title: Master Plan — pi-native-crm MVP-B Implementation
 version: 1.0
 status: ativo
 date: 2026-04-28
-owner: helson
+owner: ydflow
 total_epics: 13
 estimated_total_stories: 128
 estimated_total_points: 380

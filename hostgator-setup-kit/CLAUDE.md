@@ -14,7 +14,7 @@ cada um — vive em `.agents/skills/pi-native-instalar/SKILL.md` na raiz do repo
 Se você está vendo só esta pasta, clone o repositório (o instalador precisa dele de qualquer forma):
 
 ```bash
-git clone --depth 1 https://github.com/helsome/AiNativeCrm.git pi-native-crm
+git clone --depth 1 https://github.com/ydflow/pi-native-crm.git pi-native-crm
 cd pi-native-crm
 cat .agents/skills/pi-native-instalar/SKILL.md
 ```

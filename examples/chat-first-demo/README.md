@@ -88,7 +88,7 @@ The **本次 Trace** panel shows events actually executed by this local fixture 
 
 The separate **历史模型证据** panel contains minimized factual excerpts from the already-committed report:
 
-- Repository: `helsome/AiNativeCrm`
+- Repository: `ydflow/pi-native-crm`
 - Inspected production reference: `fc80b14dc88406ab6f5e6ec3ed9ca61d632c0674`
 - Report: `docs/testing/multi-agent-eval-real-run-2026-09-28.md`
 - Recorded model: `opencode / space-bunny-free`, date 2026-09-28

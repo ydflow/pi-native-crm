@@ -15,10 +15,10 @@ set -euo pipefail
 # de qualquer 'cd' (step 2 pode entrar num repo clonado à parte).
 KIT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd)"
 
-REPO_URL="${REPO_URL:-https://github.com/helsome/AiNativeCrm.git}"
+REPO_URL="${REPO_URL:-https://github.com/ydflow/pi-native-crm.git}"
 # Uma constante, dois usos (o fim feliz e o fim travado) — e o comecar.sh tem a
 # gêmea. Link repetido à mão vira link divergente na primeira troca.
-COMUNIDADE_URL="https://github.com/helsome/AiNativeCrm/discussions"
+COMUNIDADE_URL="https://github.com/ydflow/pi-native-crm/discussions"
 REPO_DIR="${REPO_DIR:-pi-native-crm}"
 COMPOSE="docker-compose.prod.yml"
 COMPOSE_TRAEFIK="docker-compose.traefik.yml"

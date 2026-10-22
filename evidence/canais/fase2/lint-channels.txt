@@ -1,5 +1,5 @@
 
-> pi-native-crm@0.1.0 lint:channels /Users/helsome/pi-native-crm-canais
+> pi-native-crm@0.1.0 lint:channels /Users/ydflow/pi-native-crm-canais
 > tsx scripts/lint-channels.ts
 
 lint-channels: ok (53 arquivos de dívida conhecida, nenhum novo)

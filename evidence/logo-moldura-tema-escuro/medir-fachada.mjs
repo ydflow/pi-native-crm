@@ -19,7 +19,7 @@ import { join } from "node:path";
 
 const BASE = process.argv[2] ?? "http://localhost:3007";
 const ROTULO = process.argv[3] ?? "com-logo";
-const EVID = "/Users/helsome/wt/qa-logo/evidence/logo-moldura-tema-escuro";
+const EVID = "/Users/ydflow/wt/qa-logo/evidence/logo-moldura-tema-escuro";
 mkdirSync(EVID, { recursive: true });
 
 const px = (s) => Number.parseFloat(s) || 0;

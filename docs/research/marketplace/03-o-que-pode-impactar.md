@@ -5,7 +5,7 @@
 
 | campo | valor |
 |---|---|
-| worktree | `/Users/helsome/wt/marketplace-ext` |
+| worktree | `/Users/ydflow/wt/marketplace-ext` |
 | branch | `feat/marketplace-de-extensoes` |
 | SHA base | `8ad4e257257f1f30a2d26de59229b93fa8915b6b` (topo de `origin/main`) |
 | `git status --porcelain` | 1 linha: `?? docs/research/marketplace/` (este documento) |
@@ -271,7 +271,7 @@ não-negociável 11 no mesmo texto.
 **MEDIDO. Existe exatamente UM pacote de exemplo no repositório, e ele é gerado por código, não versionado como arquivo.**
 
 ```bash
-cd /Users/helsome/wt/marketplace-ext
+cd /Users/ydflow/wt/marketplace-ext
 grep -rl --include='*.json' '"declarative"' . | grep -v node_modules | wc -l   # → 0
 ```
 

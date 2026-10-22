@@ -61,7 +61,7 @@ const BOT = "pi-native-release[bot]";
 
 /** O login com que a API apresenta o App — o e-mail do corte real confirma o slug. */
 const LOGIN_DO_APP = "pi-native-crm-release[bot]";
-const REPO_DE_CIMA = "helsome/AiNativeCrm";
+const REPO_DE_CIMA = "ydflow/pi-native-crm";
 
 /** Uma linha no formato que o `--jq` da guarda produz: cinco campos por TAB. */
 function linhaDaApi(login: string, tipo: string, ref: string, repo: string, numero: number): string {

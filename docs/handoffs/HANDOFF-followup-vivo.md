@@ -302,7 +302,7 @@ nomeou os seis painéis. Previsto 1, medido 1.
 Ele parou antes de rodar a suíte e perguntou, porque percebeu que
 `scripts/seed-e2e-credentials.ts` **rotaciona o TOTP do admin** e derrubaria o run
 do maestro em andamento. Virou regra escrita para o time
-(`/Users/helsome/fv-briefings/PROTOCOLO-E2E.md`): o maestro é o dono do
+(`/Users/ydflow/fv-briefings/PROTOCOLO-E2E.md`): o maestro é o dono do
 seed, ninguém mais o roda, credenciais se copiam; nunca criar `.env.local` num
 worktree; uma porta por frente (3101–3106); prazo de 60s nas esperas.
 

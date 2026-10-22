@@ -6,7 +6,7 @@
 > Contrato: [`docs/specs/16-spec-tres-papeis-do-agente.md`](../specs/16-spec-tres-papeis-do-agente.md)
 > Doutrina: [`docs/doctrine/separacao-fala-e-operacao.md`](../doctrine/separacao-fala-e-operacao.md)
 > Branch: `feat/tres-papeis-do-agente` · Base: `origin/main` = `0a85d251`
-> **Worktree dedicado:** `/Users/helsome/pi-native-crm-tres-papeis` — a árvore principal foi
+> **Worktree dedicado:** `/Users/ydflow/pi-native-crm-tres-papeis` — a árvore principal foi
 > trocada por outra sessão duas vezes no meio do trabalho, e o worktree acabou com a disputa.
 > Ele **não tem `.env.local`**, e isso é uma proteção, não um detalhe (ver Passo 5 abaixo).
 

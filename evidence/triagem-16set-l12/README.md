@@ -9,7 +9,7 @@ PROVADO pela tela, o que FALHOU e o que ficou NÃO MEDIDO — e por quê.
 ## Ambiente, o mais perto possível de uma VPS recém-instalada
 ## Ambiente, o mais perto possível de uma VPS recém-instalada
 
-- Worktree próprio `qa/lote-12` em `/Users/helsome/wt/qa-l12`, criado de
+- Worktree próprio `qa/lote-12` em `/Users/ydflow/wt/qa-l12`, criado de
   `origin/integracao/triagem-15set-l12`. O checkout de trabalho de outra sessão
   não foi tocado.
 - Supabase local **Postgres 17.6**, projeto próprio `qa-l12` (portas **6232x**),

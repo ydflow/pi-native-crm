@@ -23,7 +23,7 @@
 ## 1. Clonar e configurar
 
 ```bash
-git clone https://github.com/helsome/AiNativeCrm.git && cd pi-native-crm
+git clone https://github.com/ydflow/pi-native-crm.git && cd pi-native-crm
 cp .env.hostgator.example .env   # o template de produção (o .env.example é o de dev)
 ```
 

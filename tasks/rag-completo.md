@@ -1,6 +1,6 @@
 # Plano — RAG completo (feat/rag-completo)
 
-Base: `origin/main` @ 8112377a. Worktree: `/Users/helsome/pi-native-crm-rag`.
+Base: `origin/main` @ 8112377a. Worktree: `/Users/ydflow/pi-native-crm-rag`.
 Diagnóstico completo: `/private/tmp/.../scratchpad/diagnostico-rag.md` (7 mapas + consolidação).
 
 ## A inversão que resolve quase tudo

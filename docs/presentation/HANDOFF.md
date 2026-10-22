@@ -17,7 +17,7 @@ Em uma única sessão autônoma de ~3 horas, partindo de PRD + Regras de Negóci
 - ✅ **Scaffolding completo** Next.js 15 + TypeScript + Tailwind + shadcn/ui (38 arquivos)
 - ✅ **Schema deployado em produção** no Supabase sa-east-1: **31 tabelas com RLS, 7 migrations, 100+ indexes**
 - ✅ **TypeScript types gerados** do banco (2184 linhas em `lib/database.types.ts`)
-- ✅ **Repositório no GitHub**: https://github.com/helsome/AiNativeCrm
+- ✅ **Repositório no GitHub**: https://github.com/ydflow/pi-native-crm
 - ✅ **Security advisors** rodados, hardening aplicado (search_path, RLS coverage, anon revoke)
 
 ---
@@ -55,7 +55,7 @@ Em uma única sessão autônoma de ~3 horas, partindo de PRD + Regras de Negóci
 | **Supabase project** | `rrydmwnporysaiysiztn` em `sa-east-1` (São Paulo), Postgres 17 |
 | **URL** | `https://rrydmwnporysaiysiztn.supabase.co` |
 | **Anon key** (publishable) | `sb_publishable_71qDjdwBUo-a8qihNdFj2Q_wew0WUAi` |
-| **GitHub repo** | https://github.com/helsome/AiNativeCrm (private) |
+| **GitHub repo** | https://github.com/ydflow/pi-native-crm (private) |
 
 ---
 
@@ -124,7 +124,7 @@ Triggers de domínio implementados:
 
 Tudo decidido durante a sessão autônoma está documentado em:
 
-- **Memórias persistentes do projeto** em `~/.claude/projects/-Users-helsome-pi-native-crm/memory/`
+- **Memórias persistentes do projeto** em `~/.claude/projects/-Users-ydflow-pi-native-crm/memory/`
   - `project_tenancy_model.md` — Multi-tenant clássico desde dia 1 (Opção A)
   - `project_mvp_scope.md` — Opção B (com IA core)
   - `project_ecommerce_integration.md` — Nuvemshop only no MVP
@@ -192,7 +192,7 @@ Tudo decidido durante a sessão autônoma está documentado em:
   ```bash
   npx @marp-team/marp-cli docs/presentation/pitch-deck.md -o pitch.pdf
   ```
-- GitHub repo: https://github.com/helsome/AiNativeCrm (mostre as docs)
+- GitHub repo: https://github.com/ydflow/pi-native-crm (mostre as docs)
 - Supabase Studio: dashboard.supabase.com → projeto pi-native-crm → Database → Tables (31 tabelas com RLS verde)
 
 ---

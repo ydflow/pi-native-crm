@@ -1065,7 +1065,7 @@ Critério: nenhuma tela quebra, nenhum stack trace, nenhum texto de erro cru.
 |----|--------|--------|-----------|
 | M1 | `supabase/config.toml` trava `major_version = 15`, mas `baseline.sql` exige PG17 (`GRANT MAINTAIN`) — contribuidor open-source não sobe ambiente local | reproduzido | Alta (DX) |
 | M2 | Trilha manual do `docs/deploy-selfhost/README.md` não configura o cron do drain → automações mortas em silêncio | explorer webhooks | Alta |
-| M3 | ~~README self-host aponta repo/imagem `pi-native-crm/*`; kit usa `helsome/*`~~ **CORRIGIDO 2026-08-13** — era um `git clone` de uma org que não existe (404) em `docs/deploy-selfhost/README.md:26`. Uma consultoria externa leu essa string e concluiu que o compose apontava para uma org desvinculada; o compose sempre apontou para `helsome`. | explorer webhooks | — |
+| M3 | ~~README self-host aponta repo/imagem `pi-native-crm/*`; kit usa `ydflow/*`~~ **CORRIGIDO 2026-08-13** — era um `git clone` de uma org que não existe (404) em `docs/deploy-selfhost/README.md:26`. Uma consultoria externa leu essa string e concluiu que o compose apontava para uma org desvinculada; o compose sempre apontou para `ydflow`. | explorer webhooks | — |
 | M4 | `INVITE_TOKEN_SECRET` ausente → fallback `"dev-fallback"` → convite forjável em VPS mal configurada | explorer CRM/time | Alta (segurança) |
 | M5 | AI Gateway key ausente → bot mudo sem NENHUM feedback na UI | explorer IA | Média |
 | M6 | Knowledge sources: botões de upload/configurar são stubs "Em breve" | explorer IA | Média |
@@ -1098,7 +1098,7 @@ Critério: nenhuma tela quebra, nenhum stack trace, nenhum texto de erro cru.
 Ambiente: VPS HostGator (143.95.209.17), domínio `test-crm.vidagamificada.com.br`,
 projeto Supabase **novo e virgem** (0 tabelas / 0 usuários / 0 buckets antes de cada
 instalação), cache de build do Docker zerado (a VPS realmente compila o worker),
-imagem `ghcr.io/helsome/pi-native-crm:latest` — a mesma que o comprador recebe.
+imagem `ghcr.io/ydflow/pi-native-crm:latest` — a mesma que o comprador recebe.
 
 Duas instalações completas do zero: a primeira para achar defeitos, a segunda
 (após todas as correções publicadas na `main`) como prova. Entre elas, o banco

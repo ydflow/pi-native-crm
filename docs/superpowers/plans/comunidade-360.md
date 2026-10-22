@@ -17,7 +17,7 @@ Autorização: usuário aprovou implementar as oito sugestões e defeitos associ
 
 ## Global Constraints
 
-- Preserve trabalhos de outras sessões. Trabalho apenas no worktree `/Users/helsome/wt/comunidade-360`, branch `feat/comunidade-360`.
+- Preserve trabalhos de outras sessões. Trabalho apenas no worktree `/Users/ydflow/wt/comunidade-360`, branch `feat/comunidade-360`.
 - Leia `CLAUDE.md` e `docs/doctrine/sistema-vivo.md`. Tenant confiável, filtros explícitos, RLS real, Zod, RBAC/MFA preservados, auditoria e superfície visível de falha.
 - Schema em tripla: migration nova + apêndice idempotente baseline + MANIFEST, com tipos e testes DB. Instalação e atualização não exigem edição manual.
 - Reutilize mecanismos existentes. DIRC antes de criar campos. Não ampliar autorização para implementar apresentação. Não introduzir provider fora de `lib/channels/`.

@@ -1,6 +1,6 @@
 # Inbox: quem manda nesta conversa
 
-Base `origin/main` @ 927dfa51 · worktree `/Users/helsome/wt/inbox-comando` · branch `feat/inbox-quem-manda`.
+Base `origin/main` @ 927dfa51 · worktree `/Users/ydflow/wt/inbox-comando` · branch `feat/inbox-quem-manda`.
 
 Este arquivo é a **segunda** versão. A primeira foi submetida a cinco críticos que mediram em Postgres
 real; a lente de regressão devolveu **PARA** e duas decisões morreram. O que segue já incorpora os

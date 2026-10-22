@@ -1,4 +1,4 @@
-/* Navigation faithfully mapped from AiNativeCrm catalogo.ts at a891934. */
+/* Navigation faithfully mapped from pi-native-crm catalogo.ts at a891934. */
 const CRM_CATALOG = [
   {
     "href": "/app",

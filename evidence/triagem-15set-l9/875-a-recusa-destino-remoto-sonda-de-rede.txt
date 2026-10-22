@@ -21,9 +21,9 @@
 [seed-automacoes-e-followups] ⚠️  DESTINO MISTO — a API vai para REMOTO (https://exemplo-remoto.invalid) e o Postgres para LOCAL ((vazio)). Quem abre pg.Pool escreve no SEGUNDO. (origem: ambiente)
 [seed] sem crm_vivo em .e2e-creds.json — a regra de aniversário fica de fora (rode scripts/seed-crm-vivo.ts antes para tê-la).
 ❌ Seed de automações e follow-ups falhou: Error: regra "Lead VIP ganha prioridade e cai com o gerente": TypeError: fetch failed
-    at semearAutomacoes (/Users/helsome/wt/qa-l9/scripts/seed-automacoes-e-followups.ts:140:22)
+    at semearAutomacoes (/Users/ydflow/wt/qa-l9/scripts/seed-automacoes-e-followups.ts:140:22)
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
-    at async main (/Users/helsome/wt/qa-l9/
+    at async main (/Users/ydflow/wt/qa-l9/
 ## sonda de rede
 {"t":1789461029616,"tipo":"sonda_ativa","pid":62580}
 {"t":1789461029689,"tipo":"sonda_ativa","pid":62586}

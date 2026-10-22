@@ -4,7 +4,7 @@ parent: 00-prd-master.md
 version: 0.1
 status: em revisão
 date: 2026-04-28
-owner: helson
+owner: ydflow
 referencia_arquitetural: docs/research/reference-synthesis.md
 ---
 

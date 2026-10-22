@@ -1,6 +1,6 @@
 # Prova em tela da Agenda — pelo maestro, depois dos consertos
 
-**Régua:** worktree `/Users/helsome/wt/cal-integra` (meu), `integra/w0`
+**Régua:** worktree `/Users/ydflow/wt/cal-integra` (meu), `integra/w0`
 @ `90c6bb1f`, árvore limpa. App de **produção** (`next build` + `next start`) na
 3012, contra o stack isolado `pi-native-cal` (54421). Login pelo formulário,
 navegação por clique.

@@ -22,7 +22,7 @@ exposes_contracts:
   - "event.lead.lost"
 status: completed
 created_at: 2026-04-28
-owner: helson
+owner: ydflow
 ---
 
 # EPIC-04 — Pipeline Kanban

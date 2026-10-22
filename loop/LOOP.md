@@ -62,7 +62,7 @@ Depois de adquirir o lock, IMEDIATAMENTE (ainda antes do ritual):
    restos nem deixe o commit atômico engolir arquivos de outra sessão.
 
 > Estado do loop tem UM endereço: o **checkout principal**
-> (`loop/loop.config.json → main_checkout`, hoje `/Users/helsome/pi-native-crm`).
+> (`loop/loop.config.json → main_checkout`, hoje `/Users/ydflow/pi-native-crm`).
 > É nele que o loop roda depois que `gov/setup` for mergeada em `main`.
 
 ## 1. Ritual de abertura (obrigatório, NESTA ordem — nunca pule)

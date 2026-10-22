@@ -78,9 +78,9 @@ fi
 # Confere o token AGORA, em vez de descobrir pelo log de uma vaga parada.
 codigo=$(curl -s -o /dev/null -w '%{http_code}' \
   -H "Authorization: Bearer $(cat "$CONF/token")" \
-  "https://api.github.com/repos/helsome/AiNativeCrm/actions/runners")
+  "https://api.github.com/repos/ydflow/pi-native-crm/actions/runners")
 [ "$codigo" = 200 ] || falha "o token não lê os runners do repositório (HTTP ${codigo}). Confira a permissão Administration."
-echo "helsome/AiNativeCrm" > "$CONF/repo"
+echo "ydflow/pi-native-crm" > "$CONF/repo"
 
 nucleos=$(nproc)
 memoria_gb=$(awk '/MemTotal/ {printf "%d", $2/1024/1024}' /proc/meminfo)
@@ -154,6 +154,6 @@ systemctl enable --now pi-native-executor-atualizar.timer
 
 echo
 echo "==> pronto: ${vagas} vaga(s) ligada(s)."
-echo "Confira em https://github.com/helsome/AiNativeCrm/settings/actions/runners"
+echo "Confira em https://github.com/ydflow/pi-native-crm/settings/actions/runners"
 echo "(cada vaga aparece como pi-native-vaga-N-<hora>, status Idle)."
 echo "Logs de uma vaga: journalctl -u pi-native-vaga@1 -f"

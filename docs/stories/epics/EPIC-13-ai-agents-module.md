@@ -34,7 +34,7 @@ exposes_contracts:
   - "realtime.ai_agent_runs-{org_id}"
 status: pending
 created_at: 2026-05-05
-owner: helson
+owner: ydflow
 research_dossier: ~/tino-ai/Tino/research/pre-development/ai-agent-framework-pi-native-whatsapp/
 specs:
   - docs/specs/10-spec-ai-agents-runtime.md

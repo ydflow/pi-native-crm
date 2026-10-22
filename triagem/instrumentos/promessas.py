@@ -368,7 +368,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     ap.add_argument("prs", nargs="*", type=int)
     ap.add_argument("--abertos", action="store_true", help="todos os PRs abertos (padrão sem números)")
-    ap.add_argument("--mantenedor", default="helsome")
+    ap.add_argument("--mantenedor", default="ydflow")
     ap.add_argument("--repo", default=os.environ.get("SONDA_REPO"))
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--gravar")

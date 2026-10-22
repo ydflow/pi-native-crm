@@ -78,7 +78,7 @@ os bugs achados na causa raiz.
 
 - **M2/M10** — trilha manual do `docs/deploy-selfhost/README.md` não configura o
   cron do drain → automações morrem em silêncio numa VPS que não usou o kit.
-- **M3** — README self-host aponta repo/imagem `pi-native-crm/*`; kit usa `helsome/*`.
+- **M3** — README self-host aponta repo/imagem `pi-native-crm/*`; kit usa `ydflow/*`.
 - **M4** — `INVITE_TOKEN_SECRET` ausente → fallback `"dev-fallback"` → convite forjável.
 - **M5** — AI Gateway key ausente → bot mudo sem feedback na UI.
 - **M6** — Knowledge sources: upload de FAQ/política é stub "Em breve".

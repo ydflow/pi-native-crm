@@ -5,7 +5,7 @@ depends_on: 01-spec-platform-base.md, 02-spec-customer-360.md
 version: 0.1
 status: em revisão
 date: 2026-04-28
-owner: helson
+owner: ydflow
 referencia_arquitetural: docs/research/reference-synthesis.md
 business_rules: L-01, L-02, L-03, L-04, L-05, L-06, L-07, L-08, L-09, L-10, B-05
 ---

@@ -17,7 +17,7 @@ import {
  * um PR consegue editar todas essas fontes ao mesmo tempo.
  *
  * No GitHub Actions existe uma referência que não vem do checkout do PR:
- * `GITHUB_REPOSITORY_OWNER`. Em um PR contra o upstream ela vale `helsome`;
+ * `GITHUB_REPOSITORY_OWNER`. Em um PR contra o upstream ela vale `ydflow`;
  * num fork que publica as próprias imagens, vale o dono daquele fork. Assim o
  * mesmo gate distingue os dois casos sem gravar o nome do dono dentro do teste.
  *

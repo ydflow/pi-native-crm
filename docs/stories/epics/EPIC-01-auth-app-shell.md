@@ -23,7 +23,7 @@ exposes_contracts:
   - "cookie.sb-pi-native-auth"
 status: completed
 created_at: 2026-04-28
-owner: helson
+owner: ydflow
 ---
 
 # EPIC-01 — Auth & App Shell

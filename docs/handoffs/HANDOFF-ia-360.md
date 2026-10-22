@@ -5,7 +5,7 @@
 >
 > Contrato e motivos: `docs/handoffs/BRIEFING-ia-360.md` — leia antes de tocar em código.
 > Branch: `feat/ia-360-mcp` · Base: `origin/main` = `687716a`
-> Worktree do Maestro: `/Users/helsome/pi-native-crm-ia360`
+> Worktree do Maestro: `/Users/ydflow/pi-native-crm-ia360`
 
 ---
 
@@ -87,7 +87,7 @@ envelhecer — se a wave entregar as tools e ninguém tirar o pacote da dívida,
 
 ### Wave 4 — Organizar a operação · EM ANDAMENTO
 
-**Terminal:** MaestroConexoes · worktree `/Users/helsome/pi-native-crm-ia360-w4-organizar`
+**Terminal:** MaestroConexoes · worktree `/Users/ydflow/pi-native-crm-ia360-w4-organizar`
 · branch `feat/ia-360-w4-organizar` · base `99cd0fc` (contém `origin/main` = `687716a`;
 `git log HEAD..origin/main` vazio, medido antes de começar).
 ### Wave 1 — o painel do humano · CONCLUÍDA
@@ -393,7 +393,7 @@ dos describes subiu para 240 s para caber essa recuperação.
 ### Wave 2 — Não perder o cliente (pacote `reter`) · CONCLUÍDA
 
 **Entregue por:** DevVivo · branch `feat/ia-360-w2-reter` · worktree
-`/Users/helsome/pi-native-crm-ia360-w2-reter` · base `99cd0fc`
+`/Users/ydflow/pi-native-crm-ia360-w2-reter` · base `99cd0fc`
 
 | Medida | Antes (`99cd0fc`) | Depois (`02904498`) |
 |---|---|---|
@@ -455,7 +455,7 @@ anterior à wave. Cada uma produziu exatamente uma reprovação; o controle rest
 
 ### Wave 3 — passar para um humano (pacote `escalar`) · CÓDIGO E TESTES CONCLUÍDOS
 
-**Entregue por:** terminal "Maestro" · worktree `/Users/helsome/pi-native-crm-ia360-w3-escalar`
+**Entregue por:** terminal "Maestro" · worktree `/Users/ydflow/pi-native-crm-ia360-w3-escalar`
 **Branch:** `feat/ia-360-w3-escalar` · **SHA do marco:** `c0db6aa` (árvore limpa) · base `99cd0fc`
 
 O pacote tinha **1** capacidade (chamar um atendente) e agora tem **7**. Mais
