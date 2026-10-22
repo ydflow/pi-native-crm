@@ -301,7 +301,13 @@ describe("packaging — o artefato que o cliente instala", () => {
     expect(semComentarios, "PRs deixaram de construir e descartar as imagens").toContain(
       "pull_request:",
     );
-    for (const automatico of ["push:", "schedule:", "workflow_run:"]) {
+    // `push: tags: ["v*"]` é o gatilho LEGÍTIMO de publicação: dispara UMA vez,
+    // quando a tag nasce, e é o que satisfaz o `promover-stable` (que exige
+    // `push` + `tag` + `v*` para mover o canal `stable`). Sem ele, o job
+    // `promover-stable` nunca roda e o self-hoster que puxa `:stable` não recebe
+    // atualização nenhuma — o defeito medido quando o migrate removeu o evento.
+    // Os proibidos continuam sendo os que RE-PUBLICAM sobre uma tag existente.
+    for (const automatico of ["schedule:", "workflow_run:"]) {
       expect(
         semComentarios,
         `publish-image.yml ainda possui o gatilho automático '${automatico}'`,

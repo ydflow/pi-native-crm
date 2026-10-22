@@ -26,8 +26,8 @@ Se você usa número próprio no WhatsApp, reconecte depois de atualizar.
 
 Primeira versão marcada do pi-native-crm.
 
-[Não lançado]: https://github.com/ydflow/pi-native-crm/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/ydflow/pi-native-crm/releases/tag/v1.0.0
+[Não lançado]: https://github.com/example/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/example/releases/tag/v1.0.0
 `;
 
 describe("extractChangelogSection", () => {
