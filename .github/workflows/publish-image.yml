@@ -19,10 +19,12 @@ name: Publicar imagem Docker (GHCR)
 # defeito no dia em que o módulo for instalado por um self-hoster de verdade.
 
 on:
-  # Publicação deliberadamente manual neste repositório interno.
-  # Pull requests continuam construindo e descartando as imagens como gate;
-  # nenhum push/tag envia imagens ao GHCR.
+  # Pull requests continuam construindo e descartando as imagens como gate.
+  # Push de tag `v*` publica a imagem da versão e move o canal `stable`;
+  # workflow_dispatch fica para publicações manuais deliberadas.
   pull_request:
+  push:
+    tags: ["v*"]
   workflow_dispatch: {}
   # NÃO acrescente `release: types: [published]` aqui. Ele já esteve, e o efeito
   # foi medido na v1.3.0: `gh release create` empurra a tag E publica a release,
