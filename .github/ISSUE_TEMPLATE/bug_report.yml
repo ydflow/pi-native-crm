@@ -1,42 +1,45 @@
-name: 🐛 Bug report
-description: Algo quebrou ou não funciona como documentado
-labels: ["bug"]
+name: 缺陷反馈 / Bug report
+description: 报告可复现的启动、工作台、工具和服务接入问题
+title: "[Bug] "
+labels:
+  - bug
 body:
   - type: markdown
     attributes:
-      value: |
-        Obrigado por reportar! Para **vulnerabilidades de segurança**, NÃO abra issue — use o [relato privado](https://github.com/ydflow/pi-native-crm/security/advisories/new).
-  - type: textarea
-    id: what-happened
+      value: 提交前请搜索已有 Issue，并移除客户信息与凭据。安全问题请按[安全政策](https://github.com/ydflow/pi-native-crm/blob/main/SECURITY.md)报告。
+  - type: input
+    id: version
     attributes:
-      label: O que aconteceu?
-      description: Descreva o bug e o que você esperava que acontecesse.
-      placeholder: Ao clicar em X na tela Y, acontece Z em vez de W.
+      label: 版本与环境
+      description: commit、OS、Node、pnpm、本地开发或自托管
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 运行方式
+      options:
+        - 真实 CRM 后端
+        - 静态交互演示
+        - 历史真实模型录制
+        - 测试或离线 fixture
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Passos para reproduzir
-      placeholder: |
-        1. Acesse '...'
-        2. Clique em '...'
-        3. Veja o erro
+      label: 复现步骤
+      description: 给出最小操作路径，涉及模型或外部服务时注明服务及版本。
     validations:
       required: true
   - type: textarea
-    id: environment
+    id: result
     attributes:
-      label: Ambiente
-      description: Versão do Node, pnpm, SO, e onde roda (local / Vercel / VPS HostGator).
-      placeholder: |
-        Node 22.x · pnpm 9.x · macOS 15 · self-host via hostgator-setup-kit
-        Output de /api/v1/health: ...
+      label: 期望结果与实际结果
     validations:
       required: true
   - type: textarea
-    id: logs
+    id: evidence
     attributes:
-      label: Logs / screenshot
-      description: Stack trace, print ou output relevante (remova dados pessoais!).
-      render: shell
+      label: 脱敏日志、截图与排查结果
+      description: 可附错误信息、请求 ID、发生时间与已执行检查。

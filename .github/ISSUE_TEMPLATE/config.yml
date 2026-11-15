@@ -1,8 +1,14 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
-  - name: 💬 Perguntas e ideias
-    url: https://github.com/ydflow/pi-native-crm/discussions
-    about: Dúvidas de setup, ideias e showcase vão melhor em Discussions.
-  - name: 🔒 Vulnerabilidade de segurança
-    url: https://github.com/ydflow/pi-native-crm/security/advisories/new
-    about: Relato privado — nunca abra issue pública para falha de segurança.
+  - name: "使用反馈、任务认领与贡献入口"
+    url: https://github.com/ydflow/pi-native-crm/issues/14
+    about: "先了解启动方式、反馈要求与首次贡献任务"
+  - name: "Pi Native CRM Roadmap"
+    url: https://github.com/ydflow/pi-native-crm/issues/15
+    about: "可复现上手、执行恢复与证据评测的阶段任务"
+  - name: "当前能力与验证记录"
+    url: https://github.com/ydflow/pi-native-crm/issues/16
+    about: "查看源码基础、服务依赖和有日期的验证范围"
+  - name: "安全问题报告"
+    url: https://github.com/ydflow/pi-native-crm/blob/main/SECURITY.md
+    about: "按安全政策所列渠道报告漏洞"

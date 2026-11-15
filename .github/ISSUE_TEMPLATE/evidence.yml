@@ -1,0 +1,42 @@
+name: 证据与评测问题 / Evidence
+description: 报告知识引用、客户记忆、工具观察和评测结果异常
+title: "[Evidence] "
+body:
+  - type: input
+    id: baseline
+    attributes:
+      label: 版本与运行环境
+      description: commit、模型、相关服务版本、真实或合成数据
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 涉及环节
+      options:
+        - 知识检索与来源引用
+        - 客户记忆与同步
+        - 工具观察与业务状态
+        - 确定性检查与语义 Judge
+        - Trace 与历史回放
+    validations:
+      required: true
+  - type: textarea
+    id: mismatch
+    attributes:
+      label: 观察结果与核对依据
+      description: 列出实际内容、期望内容、来源版本与可公开依据。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤与最小样例
+      description: 注明相关 profile、rubric 版本、Run 和时间，移除客户信息与凭据。
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 影响与现有验证
+      description: 哪些回答、业务动作或评测判断受到影响？可附脱敏截图、日志和测试结果。

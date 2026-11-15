@@ -1,11 +1,21 @@
-# Pi Native CRM
-[![M8ven Verified](https://m8ven.ai/badge/mcp/ydflow-pi-native-crm-18xtoi?variant=verified&v=c334140390afdc95a4f966bb79065c7a)](https://m8ven.ai/mcp/ydflow-pi-native-crm-18xtoi?s=readme)
+<h1 align="center">Pi Native CRM</h1>
 
-以真实 CRM 为状态空间的 Agent 原生工作台。
-
-让 Agent 读取客户与商机，消费知识和记忆，调用工具推进业务；让人看清它做了什么、依据什么，以及 CRM 发生了哪些变化。
-
-[架构说明](docs/architecture/README.md) · [服务接入](docs/integrations/agent-services.md) · [开发配置](docs/SETUP.md) · [验证记录](docs/testing/system-acceptance-fixes-2026-10-03.md)
+<p align="center"><img src="docs/brand/pi-native-crm-icon.svg" alt="Pi Native CRM" width="104" /></p>
+<p align="center">
+  <strong>以真实 CRM 为状态空间的 Agent 原生工作台。</strong><br />
+  让 Agent 读取客户与商机，消费知识和记忆，调用工具推进业务；让人看清它做了什么、依据什么，以及 CRM 发生了哪些变化。
+</p>
+<p align="center">
+  <a href="#产品预览">产品预览</a> · <a href="#核心功能">核心功能</a> ·
+  <a href="#快速开始">快速开始</a> · <a href="docs/architecture/README.md">架构说明</a> ·
+  <a href="docs/integrations/agent-services.md">服务接入</a> · <a href="#社区与贡献">社区与贡献</a>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/status-内部研发-506D48" alt="内部研发版本" />
+  <img src="https://img.shields.io/badge/Next.js-React%20%2B%20TypeScript-477b74" alt="Next.js, React and TypeScript" />
+  <a href="https://m8ven.ai/mcp/ydflow-pi-native-crm-18xtoi?s=readme"><img src="https://m8ven.ai/badge/mcp/ydflow-pi-native-crm-18xtoi?variant=verified&amp;v=c334140390afdc95a4f966bb79065c7a" alt="M8ven Verified" /></a>
+</p>
+<p align="center"><a href="docs/SETUP.md">开发配置</a> · <a href="docs/testing/system-acceptance-fixes-2026-10-03.md">验证记录</a></p>
 
 > CRM 保存业务事实，Pi 驱动 Agent 行动，Harness 管理执行边界。
 
@@ -16,6 +26,23 @@ Pi Native CRM 是一个内部研发的 Agent-native CRM 工作台。联系人、
 我们关注的不只是生成一段回复，而是完整的业务动作：理解上下文、寻找证据、拆解任务、协同调查、调用工具、观察结果，再决定下一步。CRM 的价值在于提供真实对象、业务约束和可核验的状态变化。
 
 打开工作台，选择一个内置 Agent 和目标对象，就能开始任务。执行过程、工具调用、审批、数据变化与评测都围绕同一个 Run 展开。
+
+## 产品预览
+
+### Agent–CRM 工作台设计预览
+
+<p align="center"><img src="docs/design/future-crm-workbench-blue-preview.png" alt="Agent–CRM 工作台设计预览，展示内置 Agent、执行时间线、CRM 状态与动作确认" width="1200" /></p>
+
+此图为仓库已有的界面设计预览，展示 Agent、执行时间线与 CRM 状态的组织方式。图中模型连接、业务数值和版本号为设计示意。
+
+### 可运行演示与历史模型回放
+
+| Agent 对话演示 | 真实模型历史录制入口 |
+| --- | --- |
+| ![Agent 对话演示，使用虚构客户和预设回复](docs/screenshots/readme-2026-11-15/workbench-demo.jpg) | ![Agent 服务接入面板中的脱敏历史模型录制](docs/screenshots/readme-2026-11-15/real-recording.jpg) |
+| 从 CRM 对象发起任务，查看预设回复和执行记录。 | 查看 2026-10-03 保存的任务、工具观察和评测材料。 |
+
+以上两张截图于 2026-11-15 采自仓库静态演示。常规页面使用虚构数据与预设回复，历史录制展示已保存的真实模型输入输出。真实后端、数据库和外部服务需要独立启动与配置。运行方式见下方[演示与真实运行回放](#演示与真实运行回放)，演示细节见[范围说明](examples/chat-first-demo/README.md)。
 
 ## 核心功能
 
@@ -212,3 +239,22 @@ curl -fsSL https://raw.githubusercontent.com/ydflow/pi-native-crm/main/scripts/i
 - [专项 E2E 测试入口](tests/e2e/configs/README.md)
 
 内部开发先阅读 [AGENTS.md](AGENTS.md)与[CLAUDE.md](CLAUDE.md)。本项目包含继承代码，遵循 [MIT 许可及原版权声明](LICENSE)。
+
+## 社区与贡献
+
+[欢迎参与](https://github.com/ydflow/pi-native-crm/issues/14) · [阶段路线图](https://github.com/ydflow/pi-native-crm/issues/15) · [能力地图](https://github.com/ydflow/pi-native-crm/issues/16) · [Milestones](https://github.com/ydflow/pi-native-crm/milestones)
+
+欢迎围绕 CRM 业务场景、Agent 执行可靠性、知识记忆、证据评测和工作台体验参与。可复现缺陷、明确功能建议与开发任务通过 [Issues](https://github.com/ydflow/pi-native-crm/issues) 跟踪，设计取舍通过 RFC 表单讨论。
+
+| 参与方式 | 入口 |
+| --- | --- |
+| 报告问题或提出建议 | [缺陷、功能、证据问题与设计提案](https://github.com/ydflow/pi-native-crm/issues/new/choose) |
+| 找一个最小任务开始 | [适合首次参与的任务](https://github.com/ydflow/pi-native-crm/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22) · [需要协作的任务](https://github.com/ydflow/pi-native-crm/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22help%20wanted%22) |
+| 查看阶段进度 | [上手与复现](https://github.com/ydflow/pi-native-crm/milestone/1) · [执行与一致性](https://github.com/ydflow/pi-native-crm/milestone/2) · [证据与评测](https://github.com/ydflow/pi-native-crm/milestone/3) |
+| 准备提交改动 | [贡献指南](CONTRIBUTING.md) · [团队与个人负责范围](CONTRIBUTIONS.md) |
+
+认领前先阅读 Issue 的范围、源码起点和验收标准，检查 assignee 与关联 PR，再留言说明准备完成的最小范围，由维护者确认分配。提交时附真实环境、验证命令、结果与脱敏证据，UI 改动附截图。阶段任务按各自验收清单更新进度。
+
+---
+
+<p align="center"><sub>Pi Native CRM · CRM 保存业务事实，Pi 驱动 Agent 行动，Harness 管理执行边界。</sub></p>

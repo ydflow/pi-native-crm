@@ -1,24 +1,45 @@
-name: 💡 Feature request
-description: Sugira uma melhoria ou funcionalidade nova
-labels: ["enhancement"]
+name: 功能建议 / Feature request
+description: 提出 CRM 业务场景、Agent 能力和使用体验改进
+title: "[Feature] "
+labels:
+  - enhancement
 body:
-  - type: textarea
-    id: problem
+  - type: dropdown
+    id: area
     attributes:
-      label: Qual problema isso resolve?
-      description: Descreva a dor real de quem opera o CRM, não só a solução.
-      placeholder: Como atendente, eu preciso de X porque Y.
+      label: 涉及方向
+      options:
+        - CRM 与 Agent 工作台
+        - 工具、授权与审批
+        - 执行恢复与任务协作
+        - 知识与客户记忆
+        - 评测与可观测性
+        - 服务接入与开发文档
+        - 其他方向
     validations:
       required: true
   - type: textarea
-    id: solution
+    id: scenario
     attributes:
-      label: Solução proposta
-      description: Como você imagina que isso funcionaria?
+      label: 谁在什么场景遇到什么问题
+      description: 说明当前做法、遇到的困难和业务影响。
     validations:
       required: true
   - type: textarea
-    id: alternatives
+    id: outcome
     attributes:
-      label: Alternativas consideradas
-      description: Outras formas de resolver, ou como você contorna hoje.
+      label: 期望结果与验收方式
+      description: 用户应能完成什么，怎样确认改进有效？
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 最小实现与替代方案
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 依赖与参与意愿
+      description: 注明模型、外部服务、业务写入或部署依赖，以及愿意参与的范围。

@@ -1,0 +1,39 @@
+name: 设计提案 / RFC
+description: 讨论执行契约、工具、知识记忆与评测方案
+title: "[RFC] "
+labels:
+  - type:rfc
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 场景、问题与现有基础
+      description: 描述业务目标，链接已有实现与相关 Issue。
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: 方案与取舍
+      description: 说明接口、状态、替代方案及选择依据。引用外部方案时附版本和来源。
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: 授权、数据与兼容性
+      description: 说明租户范围、业务写入、凭据、迁移及已有安装的兼容处理。
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: 最小实验与验收方法
+      description: 给出测试场景、基线、预期结果、成本和失败条件。
+    validations:
+      required: true
+  - type: textarea
+    id: progress
+    attributes:
+      label: 当前进度与准备参与的范围
+      description: 待讨论、已有设计，或已运行实验及结果。
